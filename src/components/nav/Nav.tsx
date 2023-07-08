@@ -6,6 +6,7 @@ import { UrlObject } from "url";
 import NavItem from "./NavItem";
 import styles from "./Nav.module.css";
 import Image from "next/image";
+import Text from "@/components/text/Text";
 
 export type NavItem = { text: string; href: string | UrlObject };
 
@@ -40,7 +41,9 @@ const Nav = ({ items }: NavProps) => {
         <ul className={styles.navList}>
           {items.map((item) => (
             <li key={item.text} className={styles.navItem}>
-              <NavItem href={item.href}>{item.text}</NavItem>
+              <NavItem href={item.href}>
+                <Text>{item.text}</Text>
+              </NavItem>
             </li>
           ))}
         </ul>

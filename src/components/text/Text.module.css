@@ -1,0 +1,35 @@
+.xs {
+  font-size: 0.725rem;
+}
+
+.sm {
+  font-size: 1rem;
+}
+
+.md {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.lg {
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+
+.xlg {
+  font-size: 3.375rem;
+  font-weight: 400;
+}
+
+.xxlg {
+  font-size: 5.0625rem;
+  font-weight: 500;
+}
+
+.secondary {
+  opacity: 0.73;
+}
+
+.disabled {
+  opacity: 0.47;
+}

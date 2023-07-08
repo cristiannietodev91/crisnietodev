@@ -1,26 +1,126 @@
-.list {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.container {
+  width: 95%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
 }
 
+.nav {
+  width: 100%;
+  visibility: hidden;
+  position: absolute;
+  height: 0;
+  background-color: var(--foreground-rgb);
+}
+
+.vercelLogo {
+  filter: invert(1);
+}
+
+.navVisible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+
+.navToggle {
+  cursor: pointer;
+  border: 0;
+  width: 3em;
+  height: 3em;
+  padding: 0em;
+  color: white;
+  transition: opacity 250ms ease;
+
+  position: absolute;
+  right: 0;
+  background-color: var(--background-rgb);
+}
+
+.navToggle:focus,
+.navToggle:hover {
+  opacity: 0.75;
+}
+
+.hamburger {
+  width: 50%;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  width: 100%;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 .item {
-    margin: 0 0 0 1.5em;
+  padding: 0.415em;
 }
 
-.item:after {
-    content: '';
+.item:hover {
+  opacity: 0.75;
+}
+
+@media (min-width: 745px) {
+  .navToggle {
+    display: none;
+  }
+
+  .nav {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    position: relative;
+  }
+
+  .list {
+    display: flex;
+    margin: 0;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .item:after {
+    content: "";
     display: block;
     margin: auto;
     height: 3px;
     width: 0px;
     background: transparent;
-    transition: width .5s ease, background-color .5s ease;
-}
+    transition: width 0.5s ease, background-color 0.5s ease;
+  }
 
-.item:hover:after {
+  .item:hover:after {
     width: 100%;
     background: blue;
+  }
 }
+

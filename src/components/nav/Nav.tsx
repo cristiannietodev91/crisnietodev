@@ -16,7 +16,7 @@ type NavProps = {
 const Nav = ({ items }: NavProps) => {
   const [visible, setVisible] = useState(false);
   return (
-    <div className={cx(styles.container, styles.row)}>
+    <div className={cx(styles.row)}>
       <Image
         src="/vercel.svg"
         alt="Vercel Logo"
@@ -37,9 +37,9 @@ const Nav = ({ items }: NavProps) => {
           [styles.navVisible]: visible,
         })}
       >
-        <ul className={styles.list}>
+        <ul className={styles.navList}>
           {items.map((item) => (
-            <li key={item.text} className={styles.item}>
+            <li key={item.text} className={styles.navItem}>
               <NavItem href={item.href}>{item.text}</NavItem>
             </li>
           ))}

@@ -1,10 +1,10 @@
 import "./globals.css";
 import styles from "./layout.module.css";
-import { Inter } from "next/font/google";
+import { Exo_2 } from "next/font/google";
 import Nav from "@/components/nav/Nav";
 import type { NavItem } from "@/components/nav/Nav";
 
-const inter = Inter({ subsets: ["latin"] });
+const exo2 = Exo_2({ subsets: ["latin"], variable: "--font-exo2" });
 
 export const metadata = {
   title: "Create Next App",
@@ -23,8 +23,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header>
+      <body className={exo2.className}>
+        <header className={styles.main}>
           <Nav items={items} />
         </header>
         <main className={styles.main}>{children}</main>

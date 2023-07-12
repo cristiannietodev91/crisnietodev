@@ -4,3 +4,15 @@
   margin: 0 auto;
   position: relative;
 }
+
+.vercelLogo {
+  filter: invert(1);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+
+

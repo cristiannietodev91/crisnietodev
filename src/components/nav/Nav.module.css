@@ -2,11 +2,7 @@
   width: 100%;
   visibility: hidden;
   position: absolute;
-  height: 0;
-}
-
-.vercelLogo {
-  filter: invert(1);
+  height: auto;
 }
 
 .navVisible {
@@ -26,7 +22,7 @@
 
   position: absolute;
   right: 0;
-  background-color: var(--background-dark);
+  background-color: var(--color-bg-primary);
 }
 
 .navToggle:focus,
@@ -89,11 +85,6 @@
   .navList {
     display: flex;
     margin: 0;
-  }
-
-  .row {
-    display: flex;
-    justify-content: space-between;
   }
 
   .navItem:after {

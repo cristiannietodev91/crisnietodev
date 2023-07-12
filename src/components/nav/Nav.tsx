@@ -5,8 +5,9 @@ import cx from "classnames";
 import { UrlObject } from "url";
 import NavItem from "./NavItem";
 import styles from "./Nav.module.css";
-import Image from "next/image";
+
 import Text from "@/components/text/Text";
+import ToggleButton from "../button/toggle/Toggle";
 
 export type NavItem = { text: string; href: string | UrlObject };
 
@@ -17,15 +18,8 @@ type NavProps = {
 const Nav = ({ items }: NavProps) => {
   const [visible, setVisible] = useState(false);
   return (
-    <div className={cx(styles.row)}>
-      <Image
-        src="/vercel.svg"
-        alt="Vercel Logo"
-        className={styles.vercelLogo}
-        width={100}
-        height={40}
-        priority
-      />
+    <>
+      <ToggleButton></ToggleButton>
       <button
         className={styles.navToggle}
         aria-label="open navigation"
@@ -48,7 +42,7 @@ const Nav = ({ items }: NavProps) => {
           ))}
         </ul>
       </nav>
-    </div>
+    </>
   );
 };
 

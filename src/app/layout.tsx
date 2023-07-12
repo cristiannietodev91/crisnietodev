@@ -1,8 +1,11 @@
 import "./globals.css";
-import styles from "./layout.module.css";
+import Image from "next/image";
+import dynamic from "next/dynamic";
+import cx from "classnames";
 import { Exo_2 } from "next/font/google";
 import Nav from "@/components/nav/Nav";
 import type { NavItem } from "@/components/nav/Nav";
+import styles from "./layout.module.css";
 
 const exo2 = Exo_2({ subsets: ["latin"], variable: "--font-exo2" });
 
@@ -21,10 +24,31 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const setInitialTheme = `
+    function getUserPreference() {
+      if(window.localStorage.getItem('theme')) {
+        return window.localStorage.getItem('theme')
+      }
+      return window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+    }
+    document.body.dataset.theme = getUserPreference();
+  `;
+
   return (
     <html lang="en">
       <body className={exo2.className}>
-        <header className={styles.main}>
+        <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
+        <header className={cx(styles.main, styles.row)}>
+          <Image
+            src="/vercel.svg"
+            alt="Vercel Logo"
+            className={styles.vercelLogo}
+            width={100}
+            height={40}
+            priority
+          />
           <Nav items={items} />
         </header>
         <main className={styles.main}>{children}</main>

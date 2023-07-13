@@ -1,8 +1,8 @@
 .button {
-  --toggle-width: 3em;
-  --toggle-height: 1.40em;
-  --toggle-padding: 0.266em;
-  --toggle-margin: 0.5em;
+  --toggle-width: 1.7em;
+  --toggle-height: 0.8em;
+  --toggle-padding: 0.130em;
+  --toggle-margin: 0.2em;
   position: relative;
   display: flex;
   align-items: center;
@@ -16,7 +16,7 @@
   cursor: pointer;
   background: var(--primary);
   transition: background 0.25s ease-in-out;
-  margin-left: var(--toggle-margin);
+  margin: var(--toggle-margin);
 }
 
 .button:focus {

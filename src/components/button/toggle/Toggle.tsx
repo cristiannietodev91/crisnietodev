@@ -24,11 +24,11 @@ const ToggleButton = (props: Props) => {
       title={`Change to ${inactiveTheme} mode`}
     >
       <span
+        aria-hidden={true}
         className={cx(styles.toggleThumb, {
           [styles.isDark]: activeTheme === "dark",
         })}
       ></span>
-      <span aria-hidden={true}></span>
     </button>
   );
 };

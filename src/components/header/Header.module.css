@@ -1,14 +1,27 @@
+.header {
+  position: relative;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  filter: invert(var(--color-invert-filter));
+}
+
+.topRight {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 .nav {
   width: 100%;
   visibility: hidden;
   position: absolute;
   height: auto;
-}
-
-.navVisible {
-  visibility: visible;
-  height: auto;
-  position: relative;
 }
 
 .navToggle {
@@ -17,11 +30,9 @@
   width: 3em;
   height: 3em;
   padding: 0em;
-  color: white;
+  color: var(--color-text);
   transition: opacity 250ms ease;
 
-  position: absolute;
-  right: 0;
   background-color: var(--color-bg-primary);
 }
 
@@ -41,7 +52,7 @@
   display: block;
   margin: 0 auto;
   height: 3px;
-  background: white;
+  background: var(--color-text);
 }
 
 .hamburger::before,
@@ -68,23 +79,34 @@
   padding: 0.415em;
 }
 
+.navVisible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+
 @media (min-width: 745px) {
+  .header {
+    display: flex;
+  }
+
   .navToggle {
     display: none;
   }
 
   .nav {
     visibility: visible;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: auto;
     position: relative;
   }
 
   .navList {
     display: flex;
     margin: 0;
+    justify-content: center;
+  }
+
+  .topRight {
+    position: relative;
   }
 
   .navItem:after {
@@ -99,7 +121,6 @@
 
   .navItem:hover:after {
     width: 100%;
-    background: var(--white);
+    background: var(--color-text);
   }
 }
-

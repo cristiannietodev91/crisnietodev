@@ -49,3 +49,11 @@
     0
   );
 }
+
+@media (min-width: 745px) { 
+  .button {
+    --toggle-width: 2em;
+    --toggle-height: 1em;
+  }
+}
+

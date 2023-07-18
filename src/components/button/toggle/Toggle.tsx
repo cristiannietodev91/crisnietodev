@@ -4,9 +4,7 @@ import React, { useEffect, useState } from "react";
 import cx from "classnames";
 import styles from "../toggle/Toggle.module.css";
 
-type Props = {};
-
-const ToggleButton = (props: Props) => {
+const ToggleButton = () => {
   const [activeTheme, setActiveTheme] = useState(document.body.dataset.theme || "dark");
   const inactiveTheme = activeTheme === "dark" ? "light" : "dark";
 

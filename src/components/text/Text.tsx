@@ -7,19 +7,26 @@ import styles from "./Text.module.css";
 type Props = {
   variant?: string;
   size?: string;
+  className?: string;
   children: React.ReactNode;
 };
 
-const Text = ({ variant = "primary", size = "sm", children }: Props) => {
+const Text = ({
+  variant = "primary",
+  size = "sm",
+  children,
+  className,
+}: Props) => {
   return (
-    <span
+    <p
       className={cx({
+        ...(className && { className }),
         ...(styles[size] && { [styles[size]]: true }),
         ...(styles[variant] && { [styles[variant]]: true }),
       })}
     >
       {children}
-    </span>
+    </p>
   );
 };
 

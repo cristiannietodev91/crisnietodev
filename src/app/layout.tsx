@@ -3,6 +3,7 @@ import cx from "classnames";
 import { Exo_2 } from "next/font/google";
 import styles from "./layout.module.css";
 import Header from "@/components/header/Header";
+import Image from "next/image";
 
 const exo2 = Exo_2({ subsets: ["latin"], variable: "--font-exo2" });
 
@@ -37,6 +38,22 @@ export default function RootLayout({
           <Header></Header>
         </header>
         <main className={styles.main}>{children}</main>
+        <Image
+          src="/profile.png"
+          alt="Developer profile"
+          width={450}
+          height={760}
+          priority
+          className={styles.profileSm}
+        />
+        <Image
+          src="/profile.png"
+          alt="Developer profile"
+          width={600}
+          height={1024}
+          priority
+          className={styles.profileMd}
+        />
       </body>
     </html>
   );

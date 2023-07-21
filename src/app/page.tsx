@@ -28,13 +28,29 @@ export default function Home() {
           </Text>
         </div>
         <Image
-          src="/myphoto.png"
+          src="/profile.png"
           alt="Developer profile"
-          fill={true}
-          sizes="(min-width: 745px) 80vw, (min-width: 1000px) 50vw, 100vw"
+          width={550}
+          height={934}
           priority
           className={styles.profile}
         />
+      </Hero>
+      <Hero>
+        <div>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
+          reiciendis sunt eaque vero sit nulla molestiae similique dignissimos,
+          corporis minus facilis accusamus voluptas, at ea. Odit placeat ullam
+          cupiditate quia. Quos officiis doloribus nulla, consequatur iusto est
+          magni quis unde recusandae? Dolorem illo cupiditate molestiae
+          inventore, ab eos est nulla animi consequuntur deserunt accusamus
+          illum provident! Inventore quibusdam magni nulla.
+        </div>
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+          minima quae earum rem, neque aliquam in eum necessitatibus similique
+          eius alias blanditiis quasi sequi vero ut! Possimus illo minus libero?
+        </div>
       </Hero>
     </div>
   );

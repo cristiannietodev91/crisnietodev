@@ -18,7 +18,7 @@ export default function Home() {
           <hr className={styles.hr}></hr>
         </div>
         <div className={styles.contentMd}>
-          <Text size="xlg" variant="primary">
+          <Text size="xlg" variant="primary" className={styles.titleHero}>
             Hello, I am Cristian, Full stack developer
           </Text>
           <Text size="sm" variant="primary">
@@ -29,7 +29,7 @@ export default function Home() {
         </div>
         <Image
           src="/profile.png"
-          alt="Developer profile"
+          alt="Developer picture"
           width={550}
           height={934}
           priority
@@ -37,20 +37,21 @@ export default function Home() {
         />
       </Hero>
       <Hero>
-        <div>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
-          reiciendis sunt eaque vero sit nulla molestiae similique dignissimos,
-          corporis minus facilis accusamus voluptas, at ea. Odit placeat ullam
-          cupiditate quia. Quos officiis doloribus nulla, consequatur iusto est
-          magni quis unde recusandae? Dolorem illo cupiditate molestiae
-          inventore, ab eos est nulla animi consequuntur deserunt accusamus
-          illum provident! Inventore quibusdam magni nulla.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-          minima quae earum rem, neque aliquam in eum necessitatibus similique
-          eius alias blanditiis quasi sequi vero ut! Possimus illo minus libero?
-        </div>
+        <Text size="lg" variant="primary" textAlign="center" className={styles.titleAbout}>
+          About me
+        </Text>
+        <Text size="md" variant="primary" textAlign="center" className={styles.subtitleAbout}>
+          Full stack developer at Spark
+        </Text>
+        <Text size="sm" variant="primary" textAlign="justify" >
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
+          quaerat laudantium dolore. At aspernatur maiores ut delectus eos
+          repellat sapiente rerum non perferendis voluptatem eum iste id sequi
+          nihil doloribus illum, tempore labore libero, explicabo praesentium?
+          Doloribus reprehenderit consequuntur laborum perspiciatis, minima
+          sapiente culpa, praesentium non amet necessitatibus ipsam a fugiat
+          consectetur earum?.
+        </Text>
       </Hero>
     </div>
   );

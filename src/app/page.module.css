@@ -23,6 +23,14 @@
   display: none;
 }
 
+.titleAbout {
+  margin: 0.15em;
+}
+
+.subtitleAbout {
+  margin: 0.55em;
+}
+
 @media (min-width: 745px) {
   .contentSm {
     display: none;
@@ -30,9 +38,13 @@
 
   .contentMd {
     position: absolute;
-    bottom: 60px;
+    bottom: 100px;
     display: block;
-    width: 55%;
+    width: 75%;
+  }
+
+  .titleHero {
+    margin-bottom: 0.275em;
   }
 }
 
@@ -46,7 +58,12 @@
   .contentMd {
     position: relative;
     bottom: auto;
-    padding: 6em 0;
+    padding: 8em 0;
+    width: 55%;
+  }
+
+  .titleHero {
+    margin-bottom: 0.6em;
   }
 
   .profile {

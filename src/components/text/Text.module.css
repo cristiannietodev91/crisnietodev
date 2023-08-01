@@ -4,6 +4,8 @@
 
 .sm {
   font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.067em;
 }
 
 .md {
@@ -19,6 +21,7 @@
 .xlg {
   font-size: 3.375rem;
   font-weight: 400;
+  letter-spacing: 0.107em;
 }
 
 .xxlg {
@@ -32,4 +35,12 @@
 
 .disabled {
   opacity: 0.47;
+}
+
+.center {
+  text-align: center;
+}
+
+.justify {
+  text-align: justify;
 }

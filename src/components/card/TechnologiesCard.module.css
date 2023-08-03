@@ -1,0 +1,18 @@
+.technologiesCard {
+  border-radius: 0.52em;
+  background-color: var(--gray-500);
+  padding: 1em 1.8em;
+  margin: 1em 0em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.technologiesCardRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image {
+    filter: invert(var(--color-invert-filter));
+}

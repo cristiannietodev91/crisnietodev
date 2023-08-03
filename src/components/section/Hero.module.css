@@ -23,14 +23,6 @@
   display: none;
 }
 
-.titleAbout {
-  margin: 0.15em;
-}
-
-.subtitleAbout {
-  margin: 0.55em;
-}
-
 @media (min-width: 745px) {
   .contentSm {
     display: none;

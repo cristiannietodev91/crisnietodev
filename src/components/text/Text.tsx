@@ -10,6 +10,7 @@ type Props = {
   className?: string;
   textAlign?: string;
   children: React.ReactNode;
+  inline?: boolean;
 };
 
 const Text = ({
@@ -17,8 +18,8 @@ const Text = ({
   size = "sm",
   textAlign,
   children,
-
   className,
+  inline = false,
 }: Props) => {
   return (
     <p
@@ -26,7 +27,8 @@ const Text = ({
         ...(className && { [className] : true }),
         ...(styles[size] && { [styles[size]]: true }),
         ...(styles[variant] && { [styles[variant]]: true }),
-        ...(styles[textAlign]) && { [styles[textAlign]] : true }
+        ...(textAlign && styles[textAlign]) && { [styles[textAlign]] : true },
+        [styles.inline]: inline,
       })}
     >
       {children}

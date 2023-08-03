@@ -1,0 +1,21 @@
+.container {
+    border: 1px solid var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.6em 1em;
+    gap: 0.725em;
+    border-radius: 0.5em;
+    flex-shrink: 0;
+    width: 48%;
+    margin: 0.7em auto;
+}
+
+.title {
+    text-align: center;
+}
+
+.img {
+  filter: invert(var(--color-invert-filter));
+  margin: 0 auto;
+}

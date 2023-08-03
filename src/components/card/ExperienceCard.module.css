@@ -1,0 +1,38 @@
+.experienceCard {
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--primary);
+  border-radius: 0.9em;
+}
+
+.title {
+  border: 1px solid var(--primary);
+  border-radius: 0.9em;
+  padding: 0.5em;
+}
+
+.subHeader {
+  display: flex;
+}
+
+.subHeaderIcon {
+  display: flex;
+  padding: 0.5em 0;
+}
+
+.subHeaderIcon + .subHeaderIcon {
+  margin-left: 1em;
+}
+
+.dateInfo {
+  padding: 0.5em 0;
+}
+
+.icon {
+  color: var(--color-text);
+  font-size: 0.725rem;
+  margin-right: 0.55em;
+}
+
+.bodyCard {
+  padding: 1rem;
+}

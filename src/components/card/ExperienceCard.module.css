@@ -4,10 +4,22 @@
   border-radius: 0.9em;
 }
 
-.title {
+.titleContainer {
   border: 1px solid var(--primary);
   border-radius: 0.9em;
   padding: 0.5em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.title {
+  flex-grow: 1;
+}
+
+.titleIcon {
+  margin-left: 10px;
+  float: right;
 }
 
 .subHeader {
@@ -27,6 +39,10 @@
   padding: 0.5em 0;
 }
 
+.badgeContainer {
+  margin: 0.5em 0;
+}
+
 .icon {
   color: var(--color-text);
   font-size: 0.725rem;
@@ -35,4 +51,9 @@
 
 .bodyCard {
   padding: 1rem;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
 }

@@ -1,34 +1,39 @@
 import React from "react";
+import NextLink from "next/link";
 import cx from "classnames";
-import styles from "./Button.module.css";
+import { UrlObject } from "url";
+import styles from "./Link.module.css";
 
 type Props = {
-  onClick?: () => {};
+  href: string | UrlObject;
+  children: React.ReactNode;
   className?: string;
+  button?: boolean;
   variant?: string;
   size?: string;
-  children: React.ReactNode;
 };
 
-const Button = ({
+const Link = ({
+  href,
   children,
-  onClick,
   className,
-  variant = "primary",
+  button,
   size = "sm",
+  variant = "primary",
 }: Props) => {
   return (
-    <button
-      className={cx(styles.button, {
+    <NextLink
+      href={href}
+      className={cx({
         ...(className && { [className]: true }),
+        ...(button && { [styles.button]: true }),
         ...(styles[size] && { [styles[size]]: true }),
         ...(styles[variant] && { [styles[variant]]: true }),
       })}
-      onClick={onClick}
     >
       {children}
-    </button>
+    </NextLink>
   );
 };
 
-export default Button;
+export default Link;

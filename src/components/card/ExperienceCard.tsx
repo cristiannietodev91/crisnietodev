@@ -1,33 +1,69 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import cx from "classnames";
 import { FaMapMarkerAlt, FaFlag, FaChevronDown } from "react-icons/fa";
 import styles from "./ExperienceCard.module.css";
 import Text from "../text/Text";
 import Badge from "../badge/Badge";
-import Button from "../button/button/Button";
+import Link from "../button/link/Link";
 
-const ExperienceCard = () => {
+type Props = {
+  className?: string;
+  companyName?: string;
+  clientName?: string;
+  location?: string;
+  technologies?: Array<string>;
+  description?: string;
+  linkProject?: {
+    text: string,
+    link: string,
+  };
+  open: boolean;
+};
+
+const ExperienceCard = ({
+  open = false,
+  className,
+  companyName = "Company name",
+  clientName = "Client name",
+  location = "Location",
+  technologies = [],
+  description = "",
+  linkProject = {
+    link: "#",
+    text: "Link"
+  }
+}: Props) => {
+  const [isOpen, setOpen] = useState(open);
   return (
-    <div className={styles.experienceCard}>
-      <div className={styles.titleContainer}>
+    <div
+      className={cx(styles.experienceCard, {
+        ...(className && { [className]: true }),
+      })}
+    >
+      <div className={styles.titleContainer} onClick={() => setOpen(!isOpen)}>
         <Text size="md" textAlign="center" className={styles.title}>
-          Company name
+          {companyName}
         </Text>
         <FaChevronDown className={styles.titleIcon}></FaChevronDown>
       </div>
-      <div className={styles.bodyCard}>
+      <div
+        className={cx(styles.bodyCard, {
+          [styles.visible]: isOpen,
+        })}
+      >
         <div className={styles.subHeader}>
           <span className={styles.subHeaderIcon}>
             <FaMapMarkerAlt className={styles.icon}></FaMapMarkerAlt>
             <Text size="xxs" inline>
-              Location
+              {location}
             </Text>
           </span>
           <span className={styles.subHeaderIcon}>
             <FaFlag className={styles.icon}></FaFlag>
             <Text size="xxs" inline>
-              Client name
+              {clientName}
             </Text>
           </span>
         </div>
@@ -35,18 +71,21 @@ const ExperienceCard = () => {
           2013 May - 2014 Oct
         </Text>
         <div className={styles.badgeContainer}>
-          <Badge text="Techno 1"></Badge>
-          <Badge text="Techno 2"></Badge>
-          <Badge text="Techno 3"></Badge>
+          {technologies.map((technology) => (
+            <Badge
+              key={technology}
+              text={technology}
+              className={styles.badge}
+            ></Badge>
+          ))}
         </div>
         <Text size="sm" textAlign="justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum totam
-          nisi assumenda, corporis ullam sint incidunt asperiores unde quos
-          eligendi pariatur voluptas distinctio saepe laboriosam quisquam quia?
-          Enim, sit illo?
+          {description}
         </Text>
         <div className={styles.buttonContainer}>
-          <Button variant="outline">Link</Button>
+          <Link variant="outline" href={linkProject.link} button>
+            {linkProject.text}
+          </Link>
         </div>
       </div>
     </div>

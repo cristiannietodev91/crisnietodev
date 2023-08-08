@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import cx from "classnames";
 import Image from "next/image";
 import styles from "./Header.module.css";
-import NavItem from "../nav/NavItem";
+import Link from "../button/link/Link";
 import Text from "../text/Text";
 
 const ToggleButton = dynamic(() => import("../button/toggle/Toggle"), {
@@ -38,9 +38,9 @@ const Header = () => {
         <ul className={styles.navList}>
           {items.map((item) => (
             <li key={item.text} className={styles.navItem}>
-              <NavItem href={item.href}>
+              <Link href={item.href}>
                 <Text>{item.text}</Text>
-              </NavItem>
+              </Link>
             </li>
           ))}
         </ul>

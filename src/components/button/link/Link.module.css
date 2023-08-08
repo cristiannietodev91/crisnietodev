@@ -1,0 +1,23 @@
+.button {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0.25em;
+}
+
+.primary {
+  color: var(--color-text);
+}
+
+.outline {
+  border: 1px solid var(--primary);
+}
+
+.sm {
+  font-size: 0.72rem;
+  border-radius: 0.25em;
+}
+
+.button.sm {
+  padding: 0.18em .75em;
+}

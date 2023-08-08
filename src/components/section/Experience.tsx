@@ -1,7 +1,7 @@
 import React from "react";
 import Text from "../text/Text";
 import styles from "./Experience.module.css";
-import ExperienceCard from "../card/ExperienceCard";
+import AccordionExperience from "../accordion/AccordionExperience";
 
 
 const Experience = () => {
@@ -10,7 +10,7 @@ const Experience = () => {
       <Text size="lg" variant="primary" textAlign="center" className={styles.title}>
         Experience
       </Text>
-      <ExperienceCard></ExperienceCard>
+      <AccordionExperience></AccordionExperience>
     </div>
   );
 };

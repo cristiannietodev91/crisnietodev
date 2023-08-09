@@ -1,4 +1,4 @@
-.technologiesCard {
+.iconsCard {
   border-radius: 0.52em;
   background-color: var(--gray-500);
   padding: 1em 1.8em;
@@ -8,11 +8,16 @@
   gap: 1em;
 }
 
-.technologiesCardRow {
+.iconsCardRow {
   display: flex;
   justify-content: space-between;
 }
 
 .image {
-    filter: invert(var(--color-invert-filter));
+  filter: invert(var(--color-invert-filter));
+}
+
+.icon {
+  color: var(--color-text);
+  font-size: 0.725rem;
 }

@@ -1,5 +1,6 @@
 .button {
     cursor: pointer;
+    border-radius: 0.25em;
 }
 
 .primary {
@@ -15,4 +16,10 @@
   padding: 0.18em .75em;
   font-size: 0.72rem;
   border-radius: .25em;
+}
+
+.md {
+  padding: 0.54em 0.76em;
+  font-size: 1.13rem;
+  font-weight: 500;
 }

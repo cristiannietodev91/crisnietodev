@@ -6,12 +6,12 @@ import AccordionExperience from "../accordion/AccordionExperience";
 
 const Experience = () => {
   return (
-    <div>
+    <section>
       <Text size="lg" variant="primary" textAlign="center" className={styles.title}>
         Experience
       </Text>
       <AccordionExperience></AccordionExperience>
-    </div>
+    </section>
   );
 };
 

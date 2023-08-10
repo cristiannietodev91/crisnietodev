@@ -5,3 +5,9 @@
 .subtitleAbout {
   margin: 0.55em;
 }
+
+
+.iconsContainer {
+  border-radius: 0.52em;
+  background-color: var(--gray-500);
+}

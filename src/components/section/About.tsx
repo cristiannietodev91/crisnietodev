@@ -24,7 +24,7 @@ const About = () => {
     { src: "/mysql.svg", alt: "MySql Logo", width: 50, height: 50 },
   ];
   return (
-    <div>
+    <section>
       <Text
         size="lg"
         variant="primary"
@@ -50,9 +50,13 @@ const About = () => {
         sapiente culpa, praesentium non amet necessitatibus ipsam a fugiat
         consectetur earum?.
       </Text>
-      <IconsCard items={icons} itemPerRow={3}></IconsCard>
+      <IconsCard
+        items={icons}
+        itemPerRow={3}
+        className={styles.iconsContainer}
+      ></IconsCard>
       <SoftSkillContainer></SoftSkillContainer>
-    </div>
+    </section>
   );
 };
 

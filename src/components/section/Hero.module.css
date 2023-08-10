@@ -23,6 +23,19 @@
   display: none;
 }
 
+.iconsContainer {
+  position: absolute;
+  right: 0;
+  padding: 18em 0;
+  margin:  auto;
+}
+
+.iconsRow {
+  display: flex;
+  flex-direction: column;
+  gap: .3em;
+}
+
 @media (min-width: 745px) {
   .contentSm {
     display: none;

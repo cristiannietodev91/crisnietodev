@@ -11,3 +11,13 @@
     margin: 4em 0;
     padding: 0 2em;
 }
+
+.iconsContainer {
+  margin: 3em 0;
+}
+
+.iconsRow{
+  display: flex;
+  justify-content: center;
+  gap: .55em;
+}

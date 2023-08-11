@@ -3,24 +3,25 @@
 import React from "react";
 import SoftSkillsCard from "../card/SoftSkillsCard";
 import styles from "./SoftSkillContainer.module.css"; 
+import { FaGraduationCap, FaLaptopCode, FaPeopleCarry } from "react-icons/fa";
 
 const SoftSkillContainer = () => {
   return (
     <div className={styles.softSkillsContainer}>
       <SoftSkillsCard
         text="Self-taught"
-        src="/graduate.svg"
         alt="Self taught card"
+        icon={FaGraduationCap}
       ></SoftSkillsCard>
       <SoftSkillsCard
         text="Problem-solving"
-        src="/solving.svg"
         alt="Problem solving card"
+        icon={FaLaptopCode}
       ></SoftSkillsCard>
       <SoftSkillsCard
         text="Team work"
-        src="/team-work.svg"
         alt="Team work card"
+        icon={FaPeopleCarry}
       ></SoftSkillsCard>
     </div>
   );

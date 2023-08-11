@@ -19,3 +19,9 @@
   filter: invert(var(--color-invert-filter));
   margin: 0 auto;
 }
+
+@media (min-width: 745px) { 
+  .container {
+    width: 30%;
+  }
+}

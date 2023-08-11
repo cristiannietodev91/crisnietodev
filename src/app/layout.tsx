@@ -4,11 +4,12 @@ import { Exo_2 } from "next/font/google";
 import styles from "./layout.module.css";
 import Header from "@/components/header/Header";
 import Image from "next/image";
+import Footer from "@/components/footer/Footer";
 
 const exo2 = Exo_2({ subsets: ["latin"], variable: "--font-exo2" });
 
 export const metadata = {
-  title: "Cristian Nieto Dev",
+  title: "Cristian Nieto",
   description: "Cristian Nieto developer portfolio",
 };
 
@@ -34,10 +35,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={exo2.className}>
         <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
-        <header className={cx(styles.main)}>
+        <header className={styles.main}>
           <Header></Header>
         </header>
         <main className={styles.main}>{children}</main>
+        <footer className={styles.main}>
+          <Footer></Footer>
+        </footer>
         <Image
           src="/profile.png"
           alt="Developer profile"

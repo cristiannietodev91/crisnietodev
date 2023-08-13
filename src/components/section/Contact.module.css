@@ -21,3 +21,16 @@
   justify-content: center;
   gap: .55em;
 }
+
+@media (min-width: 745px) { 
+  .middleText {
+    margin: 2em 0 .5em 0;
+    font-size: var(--sub-header-font-size);
+  }
+
+  .detail {
+    margin: 0 auto 4em auto;
+    padding: 0 2em;
+    width: 50%;
+  }
+}

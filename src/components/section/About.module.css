@@ -1,5 +1,6 @@
 .titleAbout {
   margin: 0.15em;
+  font-size: var(--sub-header-font-size);
 }
 
 .subtitleAbout {
@@ -10,4 +11,37 @@
 .iconsContainer {
   border-radius: 0.52em;
   background-color: var(--gray-500);
+}
+
+@media (min-width: 745px) { 
+  .titleAbout {
+    font-size: var(--title-font-size);
+  }
+
+  .subtitleAbout {
+    font-size: var(--sub-header-font-size);
+  }
+}
+
+@media (min-width: 900px) { 
+  .titleAbout {
+    font-size: var(--header-font-size);
+  }
+
+  .subtitleAbout {
+    margin: 1em 0;
+  }
+
+  .aboutSection {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rightSection {
+    width: 55%;
+  }
+
+  .sidebar {
+    width: 25%;
+  }
 }

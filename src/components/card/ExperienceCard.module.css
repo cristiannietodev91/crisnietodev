@@ -58,7 +58,7 @@
 }
 
 .bodyCard {
-  padding: 1rem;
+  padding: 1em;
   display: none;
   flex-direction: column;
   gap: .8em;

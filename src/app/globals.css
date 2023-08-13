@@ -16,7 +16,13 @@
   --gray-800: #343A40;
   --gray-900: #343A40;
   --gray-1000: #212529;
-
+  --header-font-size: 5.0625rem; 
+  --title-font-size: 3.375rem; 
+  --sub-header-font-size: 2.25rem;
+  --body-2-font-size: 1.5rem;
+  --body-font-size: 1rem;
+  --caption-font-size: .725rem;
+  --caption-1-font-size: .5rem;
 }
 
 body,

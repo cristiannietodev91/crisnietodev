@@ -24,7 +24,7 @@ const About = () => {
     { src: "/mysql.svg", alt: "MySql Logo", width: 50, height: 50 },
   ];
   return (
-    <section>
+    <main>
       <Text
         size="lg"
         variant="primary"
@@ -33,30 +33,36 @@ const About = () => {
       >
         About me
       </Text>
-      <Text
-        size="md"
-        variant="primary"
-        textAlign="center"
-        className={styles.subtitleAbout}
-      >
-        Full stack developer at Spark
-      </Text>
-      <Text size="sm" variant="primary" textAlign="justify">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-        quaerat laudantium dolore. At aspernatur maiores ut delectus eos
-        repellat sapiente rerum non perferendis voluptatem eum iste id sequi
-        nihil doloribus illum, tempore labore libero, explicabo praesentium?
-        Doloribus reprehenderit consequuntur laborum perspiciatis, minima
-        sapiente culpa, praesentium non amet necessitatibus ipsam a fugiat
-        consectetur earum?.
-      </Text>
-      <IconsCard
-        items={icons}
-        itemPerRow={3}
-        className={styles.iconsContainer}
-      ></IconsCard>
+      <div className={styles.aboutSection}>
+        <section className={styles.rightSection}>
+          <Text
+            size="md"
+            variant="primary"
+            textAlign="center"
+            className={styles.subtitleAbout}
+          >
+            Full stack developer at Spark
+          </Text>
+          <Text size="sm" variant="primary" textAlign="justify">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
+            quaerat laudantium dolore. At aspernatur maiores ut delectus eos
+            repellat sapiente rerum non perferendis voluptatem eum iste id sequi
+            nihil doloribus illum, tempore labore libero, explicabo praesentium?
+            Doloribus reprehenderit consequuntur laborum perspiciatis, minima
+            sapiente culpa, praesentium non amet necessitatibus ipsam a fugiat
+            consectetur earum?.
+          </Text>
+        </section>
+        <aside className={styles.sidebar}>
+          <IconsCard
+            items={icons}
+            itemPerRow={3}
+            className={styles.iconsContainer}
+          ></IconsCard>
+        </aside>
+      </div>
       <SoftSkillContainer></SoftSkillContainer>
-    </section>
+    </main>
   );
 };
 

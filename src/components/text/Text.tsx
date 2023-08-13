@@ -24,10 +24,10 @@ const Text = ({
   return (
     <p
       className={cx({
-        ...(className && { [className] : true }),
         ...(styles[size] && { [styles[size]]: true }),
         ...(styles[variant] && { [styles[variant]]: true }),
         ...(textAlign && styles[textAlign]) && { [styles[textAlign]] : true },
+        ...(className && { [className] : true }),
         [styles.inline]: inline,
       })}
     >

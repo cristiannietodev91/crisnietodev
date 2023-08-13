@@ -14,7 +14,8 @@ const ToggleButton = dynamic(() => import("../button/toggle/Toggle"), {
 
 const items = [
   { href: "/about", text: "About" },
-  { href: "/about", text: "Experience" },
+  { href: "/experience", text: "Experience" },
+  { href: "/contact", text: "Contact" },
 ];
 
 const Header = () => {

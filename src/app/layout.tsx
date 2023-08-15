@@ -1,5 +1,4 @@
 import "./globals.css";
-import cx from "classnames";
 import { Exo_2 } from "next/font/google";
 import styles from "./layout.module.css";
 import Header from "@/components/header/Header";

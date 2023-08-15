@@ -11,6 +11,7 @@ type Props = {
   button?: boolean;
   variant?: string;
   size?: string;
+  target?: React.HTMLAttributeAnchorTarget | undefined
 };
 
 const Link = ({
@@ -20,10 +21,12 @@ const Link = ({
   button,
   size = "sm",
   variant = "primary",
+  target
 }: Props) => {
   return (
     <NextLink
       href={href}
+      target={target}
       className={cx({
         ...(className && { [className]: true }),
         ...(button && { [styles.button]: true }),

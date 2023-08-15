@@ -12,13 +12,17 @@
 }
 
 .titleContainer {
-  border: 1px solid var(--primary);
-  border-radius: 0.9em;
   padding: 0.5em;
   display: flex;
   align-items: center;
-  cursor: pointer;
   color: var(--white);
+  border-radius: 0.9em;
+}
+
+.titleCollapsible {
+  cursor: pointer;
+  border: 1px solid var(--primary);
+  
 }
 
 [data-theme="light"] .titleContainer {
@@ -61,7 +65,7 @@
   padding: 1em;
   display: none;
   flex-direction: column;
-  gap: .8em;
+  gap: 0.8em;
 }
 
 .buttonContainer {

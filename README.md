@@ -1,5 +1,44 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## About
+
+V1 of Cristian Nieto's portfolio. It has been a long trip to be here. What I am looking for on this project is showing up what this development trip has brought to me. 
+
+## What was the methodology used to build this portfolio
+
+what I usually do is using these projects to improve in some lack development skills that I see I must improve. That is why I followed next steps each one to learn/improve some front-end skills.
+
+### Figma 
+
+I wanted to design my v1 portfolio site from scratch before coding anything. I had never used Figma I watched some Figma youtube videos specially from [Kevin Powell](https://www.youtube.com/@KevinPowell) I had seen that designing a initial style guide and Figma components was how the work must be done those were the resources and tutorials that I follow. This is the [result](https://www.figma.com/file/1hYDcbFc012YUmvs6jNCHN/CrisDev-Portfolio?type=design&node-id=25%3A159&mode=design&t=JpFk1QNS8IBYo495-1).
+
+As I mentioned above the Figma design follows.
+
+- Initial style guide
+- Dark and light design
+- Create reusable figma components
+- Create design for different screen sizes.
+
+
+### CSS
+
+It is always good improve skills that are not usually used (Lately working mainly back-end).
+
+### React
+
+I want to follow the React philosophy creating reusable and responsive components that are used along the project. 
+
+
+## Inspiration
+
+The pandemic brought changes to many people's life I was no exception. I started working remotely with USA clients and I realized what good around world's developers were doing. One of those good things are that they have their own portfolio. I had to had my own. 
+
+
+## Front-end stuff
+
+when I started as developer was the Java 8 epoch. The first company that I worked was a Colombian gov company that used PrimeFaces and RichFaces front-end java libraries but my bigger efforts were in the back-end side. That is why showing up this portfolio is a big step in my life as a developer since It has been long time introducing new libraries new acknowledge to my personal skills but had never found the time to build this.  
+
+
 ## Getting Started
 
 First, run the development server:

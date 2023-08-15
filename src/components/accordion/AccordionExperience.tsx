@@ -1,14 +1,17 @@
 import React from "react";
 import ExperienceCard from "../card/ExperienceCard";
 import styles from "./AccordionExperience.module.css";
+import cx from "classnames";
 
-type Props = {};
+type Props = {
+  className?: string;
+};
 
-const AccordionExperience = (props: Props) => {
+const AccordionExperience = ({ className }: Props) => {
   const experiences = [
     {
       id: 1,
-      open: false,
+      open: true,
       companyName: "Company name 1",
       technologies: ["Tech 1", "Tech 2", "Tech 3"],
       description:
@@ -30,8 +33,30 @@ const AccordionExperience = (props: Props) => {
     },
     {
       id: 3,
-      open: false,
+      open: true,
       companyName: "Company name 3",
+      technologies: ["Tech 1", "Tech 2", "Tech 3"],
+      description:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. \
+        Accusantium alias placeat temporibus quo aperiam commodi obcaecati \
+        molestiae fugit consectetur sint qui vitae fuga libero, iusto, velit \
+        a enim voluptatibus soluta!",
+    },
+    {
+      id: 4,
+      open: true,
+      companyName: "Company name 4",
+      technologies: ["Tech 1", "Tech 2", "Tech 3"],
+      description:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. \
+        Accusantium alias placeat temporibus quo aperiam commodi obcaecati \
+        molestiae fugit consectetur sint qui vitae fuga libero, iusto, velit \
+        a enim voluptatibus soluta!",
+    },
+    {
+      id: 5,
+      open: true,
+      companyName: "Company name 4",
       technologies: ["Tech 1", "Tech 2", "Tech 3"],
       description:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. \
@@ -41,7 +66,7 @@ const AccordionExperience = (props: Props) => {
     },
   ];
   return (
-    <>
+    <div className={cx({ ...(className && { [className]: true }) })}>
       {experiences.map((experience) => (
         <ExperienceCard
           open={experience.open}
@@ -50,9 +75,10 @@ const AccordionExperience = (props: Props) => {
           companyName={experience.companyName}
           technologies={experience.technologies}
           description={experience.description}
+          collapsible={false}
         ></ExperienceCard>
       ))}
-    </>
+    </div>
   );
 };
 

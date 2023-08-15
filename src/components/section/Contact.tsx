@@ -38,7 +38,7 @@ const Contact = () => {
     },
   ];
   return (
-    <div className={styles.container}>
+    <div id="contact" className={styles.container}>
       <Text size="lg" variant="primary" textAlign="center">
         Contact me
       </Text>

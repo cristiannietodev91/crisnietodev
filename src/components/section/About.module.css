@@ -8,9 +8,14 @@
 }
 
 
-.iconsContainer {
+.iconsContainerSM {
   border-radius: 0.52em;
   background-color: var(--gray-500);
+}
+
+.iconsContainer {
+  display: none;
+  visibility: hidden;
 }
 
 @media (min-width: 745px) { 
@@ -38,10 +43,23 @@
   }
 
   .rightSection {
-    width: 55%;
+    width: 65%;
   }
 
   .sidebar {
     width: 25%;
+  }
+
+  .iconsContainerSM {
+    display: none;
+  }
+
+  .iconsContainer {
+    display: flex;
+    visibility: visible;
+    border-radius: 0.52em;
+    background-color: var(--gray-500);
+    gap: 2em;
+    padding: 2em 2.2em;
   }
 }

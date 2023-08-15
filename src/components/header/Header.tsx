@@ -13,9 +13,9 @@ const ToggleButton = dynamic(() => import("../button/toggle/Toggle"), {
 })
 
 const items = [
-  { href: "/about", text: "About" },
-  { href: "/experience", text: "Experience" },
-  { href: "/contact", text: "Contact" },
+  { href: "#about", text: "About" },
+  { href: "#experience", text: "Experience" },
+  { href: "#contact", text: "Contact" },
 ];
 
 const Header = () => {
@@ -24,8 +24,8 @@ const Header = () => {
   return (
     <div className={cx(styles.header)}>
       <Image
-        src="/vercel.svg"
-        alt="Vercel Logo"
+        src="/cn.svg"
+        alt="CN Logo"
         className={styles.logo}
         width={100}
         height={40}

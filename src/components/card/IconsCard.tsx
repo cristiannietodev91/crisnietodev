@@ -74,7 +74,7 @@ const IconsCard = ({
             }
 
             return href ? (
-              <Link key={Math.random()} href={href}>
+              <Link key={Math.random()} href={href} target="_blank" >
                 {children}
               </Link>
             ) : (

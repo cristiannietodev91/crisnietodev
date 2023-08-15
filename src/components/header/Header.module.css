@@ -8,7 +8,7 @@
 }
 
 .logo {
-  filter: invert(var(--color-invert-filter));
+  color: var(--color-bg-primary);
 }
 
 .topRight {

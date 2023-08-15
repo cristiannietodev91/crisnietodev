@@ -16,10 +16,11 @@ type Props = {
   technologies?: Array<string>;
   description?: string;
   linkProject?: {
-    text: string,
-    link: string,
+    text: string;
+    link: string;
   };
   open: boolean;
+  collapsible?: boolean;
 };
 
 const ExperienceCard = ({
@@ -32,8 +33,9 @@ const ExperienceCard = ({
   description = "",
   linkProject = {
     link: "#",
-    text: "Link"
-  }
+    text: "Link",
+  },
+  collapsible = true,
 }: Props) => {
   const [isOpen, setOpen] = useState(open);
   return (
@@ -42,11 +44,18 @@ const ExperienceCard = ({
         ...(className && { [className]: true }),
       })}
     >
-      <div className={styles.titleContainer} onClick={() => setOpen(!isOpen)}>
+      <div
+        className={cx(styles.titleContainer, {
+          [styles.titleCollapsible]: collapsible,
+        })}
+        {...(collapsible && { onClick: () => setOpen(!isOpen) })}
+      >
         <Text size="md" textAlign="center" className={styles.title}>
           {companyName}
         </Text>
-        <FaChevronDown className={styles.titleIcon}></FaChevronDown>
+        {collapsible && (
+          <FaChevronDown className={styles.titleIcon}></FaChevronDown>
+        )}
       </div>
       <div
         className={cx(styles.bodyCard, {

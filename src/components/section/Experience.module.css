@@ -1,3 +1,17 @@
 .title {
   margin: 0.15em;
 }
+
+@media (min-width: 900px) {
+  .experienceContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+ 
+  .experienceContainer::after {
+    content: "";
+    flex: 0 0 30%;
+  }
+}
+

@@ -6,7 +6,7 @@ V1 of Cristian Nieto's portfolio. It has been a long trip to be here. What I am 
 
 ## What was the methodology used to build this portfolio
 
-what I usually do is using these projects to improve in some lack development skills that I see I must improve. That is why I followed next steps each one to learn/improve some front-end skills.
+what I usually do is using these projects to improve in some lack development skills that I must improve. That is why I followed next steps each one to learn/improve some front-end skills.
 
 ### Figma 
 
@@ -38,6 +38,17 @@ The pandemic brought changes to many people's life I was no exception. I started
 
 when I started as developer was the Java 8 epoch. The first company that I worked was a Colombian gov company that used PrimeFaces and RichFaces front-end java libraries but my bigger efforts were in the back-end side. That is why showing up this portfolio is a big step in my life as a developer since It has been long time introducing new libraries new acknowledge to my personal skills but had never found the time to build this.  
 
+
+## What is next
+
+
+- [ ] Load real data
+- [ ] Add SEO
+- [ ] Implement Internationalization
+- [ ] Add animations to different components
+- [ ] Site most be accessible for screen readers
+- [ ] Unit testing to each component
+- [ ] Load content from CMS
 
 ## Getting Started
 

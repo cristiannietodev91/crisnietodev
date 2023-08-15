@@ -27,7 +27,14 @@ export default function RootLayout({
                 ? 'dark'
                 : 'light'
     }
+
+    function getViewPortHeight() {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', \`\${vh}px\`);
+      
+    }
     document.body.dataset.theme = getUserPreference();
+    getViewPortHeight();
   `;
 
   return (
@@ -45,7 +52,7 @@ export default function RootLayout({
           src="/profile.png"
           alt="Developer profile"
           width={450}
-          height={760}
+          height={700}
           priority
           className={styles.profileSm}
         />

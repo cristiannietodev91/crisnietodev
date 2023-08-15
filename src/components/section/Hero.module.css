@@ -1,6 +1,7 @@
 .hero {
   position: relative;
   height: 95vh;
+  height: calc(var(--vh, 1vh) * 95);
 }
 
 .contentSm {
@@ -26,8 +27,11 @@
 .iconsContainer {
   position: absolute;
   right: 0;
-  padding: 18em 0;
-  margin:  auto;
+  padding: 0;
+  height: 50%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .iconsRow {

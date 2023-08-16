@@ -55,9 +55,8 @@ const Hero = () => {
           Hello, I am Cristian, Full stack developer
         </Text>
         <Text size="sm" variant="primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-          dicta voluptatem! Vitae beatae dolorem voluptas autem repudiandae
-          culpa incidunt, adipisci neque consectetur.
+        I am a Fullstack engineer with +10 years of experience habituate to work on all-sizes companies and all types of business. 
+        working for a wide variety of clients and projects enhance my engineering skills day by day which I put into each project that I am involved in.
         </Text>
       </div>
       <Image

@@ -44,13 +44,12 @@ const About = () => {
             Full stack developer at Spark
           </Text>
           <Text size="sm" variant="primary" textAlign="justify">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-            quaerat laudantium dolore. At aspernatur maiores ut delectus eos
-            repellat sapiente rerum non perferendis voluptatem eum iste id sequi
-            nihil doloribus illum, tempore labore libero, explicabo praesentium?
-            Doloribus reprehenderit consequuntur laborum perspiciatis, minima
-            sapiente culpa, praesentium non amet necessitatibus ipsam a fugiat
-            consectetur earum?.
+          Software engineer based out of Bogota, Colombia. From the beginning of my career I highlighted as 
+          as developer and when you are good doing something you feel in love of that. 
+          <br />
+          <br />
+          Last years journey working with US clients have been the most challenging project that I ever participate
+          it has been a time of continue learning adapting a many years career to a different language but we great learnings.
           </Text>
         </section>
         <aside className={styles.sidebar}>

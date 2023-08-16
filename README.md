@@ -10,7 +10,7 @@ what I usually do is using these projects to improve in some lack development sk
 
 ### Figma 
 
-I wanted to design my v1 portfolio site from scratch before coding anything. I had never used Figma I watched some Figma youtube videos specially from [Kevin Powell](https://www.youtube.com/@KevinPowell) I had seen that designing a initial style guide and Figma components was how the work must be done those were the resources and tutorials that I follow. This is the [result](https://www.figma.com/file/1hYDcbFc012YUmvs6jNCHN/CrisDev-Portfolio?type=design&node-id=25%3A159&mode=design&t=JpFk1QNS8IBYo495-1).
+I wanted to design my v1 portfolio site from scratch before coding anything. I had never used Figma I watched some Figma youtube videos specially from [Kevin Powell](https://www.youtube.com/@KevinPowell) I had seen that designing a initial style guide and Figma components was how the work must be done those were the resources and tutorials that I follow. Take a look to the [result](https://www.figma.com/file/1hYDcbFc012YUmvs6jNCHN/CrisDev-Portfolio?type=design&node-id=25%3A159&mode=design&t=JpFk1QNS8IBYo495-1).
 
 As I mentioned above the Figma design follows.
 

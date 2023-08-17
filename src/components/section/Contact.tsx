@@ -56,10 +56,9 @@ const Contact = () => {
         textAlign="center"
         className={styles.detail}
       >
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-        reprehenderit accusamus nemo a quidem hic.
+        Interested in working together? My inbox is always open lets queue up a time to chat.
       </Text>
-      <Button size="md">Download cv</Button>
+      <Button size="md">Contact</Button>
       <IconsCard
         items={socialNetworkIcons}
         itemPerRow={4}

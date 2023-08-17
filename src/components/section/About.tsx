@@ -5,7 +5,7 @@ import Text from "../text/Text";
 import IconsCard from "../card/IconsCard";
 import SoftSkillContainer from "../container/SoftSkillContainer";
 import styles from "./About.module.css";
-import { FaJs, FaJava, FaNode, FaReact } from "react-icons/fa";
+import { FaJs, FaJava, FaNode, FaReact, FaGithub, FaHtml5 } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
 
 const About = () => {
@@ -22,6 +22,8 @@ const About = () => {
     { src: "/android.svg", alt: "Android Logo", width: 50, height: 50 },
     { icon: FaJs, alt: "JS Logo", width: 50, height: 50 },
     { src: "/mysql.svg", alt: "MySql Logo", width: 50, height: 50 },
+    { icon: FaGithub, alt: "Git Logo", width: 50, height: 50 },
+    { icon: FaHtml5, alt: "Git Logo", width: 50, height: 50 },
   ];
   return (
     <main id="about">
@@ -41,21 +43,32 @@ const About = () => {
             textAlign="center"
             className={styles.subtitleAbout}
           >
-            Full stack developer at Spark
+            Full stack developer at Spark Digital
           </Text>
           <Text size="sm" variant="primary" textAlign="justify">
-          Software engineer based out of Bogota, Colombia. From the beginning of my career I highlighted as 
-          as developer and when you are good doing something you feel in love of that. 
-          <br />
-          <br />
-          Last years journey working with US clients have been the most challenging project that I ever participate
-          it has been a time of continue learning adapting a many years career to a different language but we great learnings.
+            Software engineer based in Bogota, Colombia. From the beginning of
+            my career, I highlighted as a developer, and when you are good at
+            doing something you feel in love with that. That drove me to learn a
+            wide variety of technologies, patterns, and tools throughout my
+            career.
+            <br />
+            <br />
+            I am also a passionate Football fan chatting about best soccer
+            players and the best Football tournaments around the world of course
+            with a beer are sort of plans that bring me happiness. visiting
+            famous Football stadiums is always on my booked list.
+            <br />
+            <br />
+            Last years journey working with US clients have been the most
+            challenging project that I ever participate it has been a time of
+            continue learning adapting a many years career to a different
+            language but we great learnings.
           </Text>
         </section>
         <aside className={styles.sidebar}>
           <IconsCard
             items={icons}
-            itemPerRow={3}
+            itemPerRow={4}
             className={styles.iconsContainerSM}
           ></IconsCard>
           <IconsCard

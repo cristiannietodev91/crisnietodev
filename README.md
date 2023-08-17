@@ -46,6 +46,7 @@ when I started as developer was the Java 8 epoch. The first company that I worke
 - [ ] Add SEO
 - [ ] Implement Internationalization
 - [ ] Add animations to different components
+- [ ] Website/project images
 - [ ] Site most be accessible for screen readers
 - [ ] Unit testing to each component
 - [ ] Load content from CMS

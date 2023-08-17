@@ -92,7 +92,7 @@ const ExperienceCard = ({
           {description}
         </Text>
         <div className={styles.buttonContainer}>
-          <Link variant="outline" href={linkProject.link} button>
+          <Link variant="outline" href={linkProject.link} button target="_blank">
             {linkProject.text}
           </Link>
         </div>

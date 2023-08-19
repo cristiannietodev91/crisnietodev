@@ -10,7 +10,7 @@ what I usually do is using these projects to improve in some lack development sk
 
 ### Figma 
 
-I wanted to design my v1 portfolio site from scratch before coding anything. I had never used Figma I watched some Figma youtube videos specially from [Kevin Powell](https://www.youtube.com/@KevinPowell) I had seen that designing a initial style guide and Figma components was how the work must be done those were the resources and tutorials that I follow. Take a look to the [result](https://www.figma.com/file/1hYDcbFc012YUmvs6jNCHN/CrisDev-Portfolio?type=design&node-id=25%3A159&mode=design&t=JpFk1QNS8IBYo495-1).
+I wanted to design my v1 portfolio site from scratch before coding anything. I had never used Figma I watched some Figma youtube videos specially from [Kevin Powell](https://www.youtube.com/@KevinPowell) Designing a initial style guide and Figma components is how the work must be done those were the resources and tutorials that I followed. Take a look to the [result](https://www.figma.com/file/1hYDcbFc012YUmvs6jNCHN/CrisDev-Portfolio?type=design&node-id=25%3A159&mode=design&t=JpFk1QNS8IBYo495-1).
 
 As I mentioned above the Figma design follows.
 
@@ -36,7 +36,7 @@ The pandemic brought changes to many people's life I was no exception. I started
 
 ## Front-end stuff
 
-when I started as developer was the Java 8 epoch. The first company that I worked was a Colombian gov company that used PrimeFaces and RichFaces front-end java libraries but my bigger efforts were in the back-end side. That is why showing up this portfolio is a big step in my life as a developer since It has been long time introducing new libraries new acknowledge to my personal skills but had never found the time to build this.  
+That is why showing up this portfolio is a big step in my life as a developer since It has been long time introducing new libraries new acknowledge to my personal skills but had never found the time to build this.  
 
 
 ## What is next

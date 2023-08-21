@@ -8,7 +8,7 @@ import styles from "./Header.module.css";
 import Link from "../button/link/Link";
 import Text from "../text/Text";
 
-const ToggleButton = dynamic(() => import("../button/toggle/Toggle"), {
+const ButtonIcon = dynamic(() => import("../button/icon/ButtonIcon"), {
   ssr: false,
 })
 
@@ -47,7 +47,7 @@ const Header = () => {
         </ul>
       </nav>
       <div className={cx(styles.row, styles.topRight)}>
-        <ToggleButton></ToggleButton>
+        <ButtonIcon></ButtonIcon>
         <button
           className={styles.navToggle}
           aria-label="open navigation"

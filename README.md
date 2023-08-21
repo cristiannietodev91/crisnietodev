@@ -46,6 +46,7 @@ That is why showing up this portfolio is a big step in my life as a developer si
 - [ ] Add SEO
 - [ ] Implement Internationalization
 - [ ] Add animations to different components
+- [ ] Add storybook
 - [ ] Website/project images
 - [ ] Site most be accessible for screen readers
 - [ ] Unit testing to each component

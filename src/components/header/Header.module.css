@@ -11,6 +11,10 @@
   color: var(--color-bg-primary);
 }
 
+.logo:hover {
+  animation: logo-rotate 2s infinite linear;
+}
+
 .topRight {
   position: absolute;
   right: 0;
@@ -123,4 +127,8 @@
     width: 100%;
     background: var(--color-text);
   }
+}
+
+@keyframes logo-rotate {
+  to { transform: rotateY(360deg); }
 }

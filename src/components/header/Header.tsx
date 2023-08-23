@@ -39,7 +39,7 @@ const Header = () => {
         <ul className={styles.navList}>
           {items.map((item) => (
             <li key={item.text} className={styles.navItem}>
-              <Link href={item.href}>
+              <Link href={item.href} onClick={() => setVisible(!visible)}>
                 <Text>{item.text}</Text>
               </Link>
             </li>

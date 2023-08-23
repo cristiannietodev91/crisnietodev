@@ -11,7 +11,8 @@ type Props = {
   button?: boolean;
   variant?: string;
   size?: string;
-  target?: React.HTMLAttributeAnchorTarget | undefined
+  target?: React.HTMLAttributeAnchorTarget | undefined;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 };
 
 const Link = ({
@@ -21,7 +22,8 @@ const Link = ({
   button,
   size = "sm",
   variant = "primary",
-  target
+  target,
+  onClick
 }: Props) => {
   return (
     <NextLink
@@ -33,6 +35,7 @@ const Link = ({
         ...(styles[size] && { [styles[size]]: true }),
         ...(styles[variant] && { [styles[variant]]: true }),
       })}
+      onClick={onClick}
     >
       {children}
     </NextLink>

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
@@ -10,7 +10,7 @@ import Text from "../text/Text";
 
 const ButtonIcon = dynamic(() => import("../button/icon/ButtonIcon"), {
   ssr: false,
-})
+});
 
 const items = [
   { href: "#about", text: "About" },
@@ -22,13 +22,17 @@ const Header = () => {
   const [visible, setVisible] = useState(false);
 
   return (
-    <div className={cx(styles.header)}>
+    <header
+      className={cx(styles.header, {
+        [styles.headerVisible]: visible,
+      })}
+    >
       <Image
         src="/cn.svg"
         alt="CN Logo"
         className={styles.logo}
-        width={100}
-        height={40}
+        width={45}
+        height={45}
         priority
       />
       <nav
@@ -46,7 +50,7 @@ const Header = () => {
           ))}
         </ul>
       </nav>
-      <div className={cx(styles.row, styles.topRight)}>
+      <div className={styles.row}>
         <ButtonIcon></ButtonIcon>
         <button
           className={styles.navToggle}
@@ -56,7 +60,7 @@ const Header = () => {
           <span className={styles.hamburger}></span>
         </button>
       </div>
-    </div>
+    </header>
   );
 };
 

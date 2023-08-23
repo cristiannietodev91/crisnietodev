@@ -12,7 +12,6 @@ export const metadata = {
   description: "Cristian Nieto developer portfolio",
 };
 
-
 export default function RootLayout({
   children,
 }: {
@@ -41,9 +40,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={exo2.className}>
         <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
-        <header className={styles.main}>
-          <Header></Header>
-        </header>
+        <Header></Header>
         <main className={styles.main}>{children}</main>
         <footer className={styles.main}>
           <Footer></Footer>

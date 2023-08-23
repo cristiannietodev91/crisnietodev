@@ -1,5 +1,13 @@
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
+  padding: 0.722em .85em;
+}
+
+.headerVisible {
+  background-color: rgba(var(--color-bg-primary-rgba), .5);
 }
 
 .row {
@@ -15,17 +23,13 @@
   animation: logo-rotate 2s infinite linear;
 }
 
-.topRight {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
 
 .nav {
   width: 100%;
   visibility: hidden;
   position: absolute;
-  height: auto;
+  top: 71px;
+  left: 0;
 }
 
 .navToggle {
@@ -37,10 +41,9 @@
   color: var(--color-text);
   transition: opacity 250ms ease;
 
-  background-color: var(--color-bg-primary);
+  background-color: transparent;
 }
 
-.navToggle:focus,
 .navToggle:hover {
   opacity: 0.75;
 }
@@ -81,7 +84,7 @@
 
 .navItem {
   padding: 0.415em;
-  background: linear-gradient(to right, var(--gray-500) 50%, var(--color-bg-primary) 50%);
+  background: linear-gradient(to right, var(--gray-500) 50%, transparent 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: background-position .5s ease-out;
@@ -93,13 +96,19 @@
 
 .navVisible {
   visibility: visible;
-  height: auto;
-  z-index: 10;
+  height: calc(100vh - 71px);
+  background-color: rgba(var(--color-bg-primary-rgba), .5);
+  z-index: 1;
 }
 
 @media (min-width: 745px) {
   .header {
     display: flex;
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .navToggle {
@@ -109,6 +118,8 @@
   .nav {
     visibility: visible;
     position: relative;
+    top: 0;
+    height: auto;
   }
 
   .navList {
@@ -122,7 +133,7 @@
   }
 
   .navItem {
-    background: var(--color-bg-primary);
+    background: transparent;
     background-size: 100%;
   }
 
@@ -132,7 +143,6 @@
     margin: auto;
     height: 3px;
     width: 0px;
-    background: transparent;
     transition: width 0.5s ease, background-color 0.5s ease;
   }
 

@@ -23,15 +23,6 @@
   animation: logo-rotate 2s infinite linear;
 }
 
-
-.nav {
-  width: 100%;
-  visibility: hidden;
-  position: absolute;
-  top: 71px;
-  left: 0;
-}
-
 .navToggle {
   cursor: pointer;
   border: 0;
@@ -76,6 +67,21 @@
   transform: translateY(3px);
 }
 
+.nav {
+  width: 100%;
+  visibility: hidden;
+  position: absolute;
+  top: 71px;
+  left: 0;
+}
+
+.navVisible {
+  visibility: visible;
+  height: calc((var(--vh, 1vh) * 100) - 71px);
+  background-color: rgba(var(--color-bg-primary-rgba), .5);
+  z-index: 1;
+}
+
 .navList {
   margin: 0;
   padding: 0;
@@ -88,17 +94,19 @@
   background-size: 200% 100%;
   background-position: right bottom;
   transition: background-position 500ms ease-out;
+  overflow: hidden;
 }
 
 .navItem:hover {
   background-position: left bottom;
 }
 
-.navVisible {
-  visibility: visible;
-  height: calc((var(--vh, 1vh) * 100) - 71px);
-  background-color: rgba(var(--color-bg-primary-rgba), .5);
-  z-index: 1;
+.textItem {
+  text-align: center;
+}
+
+.textItem:hover {
+  transform: scale(1.2);
 }
 
 @media (min-width: 745px) {
@@ -109,6 +117,14 @@
     margin: 0 auto;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .headerVisible {
+    background-color: transparent;
+  }
+
+  .navVisible {
+    background-color: transparent;
   }
 
   .navToggle {
@@ -149,6 +165,10 @@
   .navItem:hover:after {
     width: 100%;
     background: var(--color-text);
+  }
+
+  .textItem:hover {
+    transform: scale(1);
   }
 }
 

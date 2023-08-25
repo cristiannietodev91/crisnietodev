@@ -44,7 +44,7 @@ const Header = () => {
           {items.map((item) => (
             <li key={item.text} className={styles.navItem}>
               <Link href={item.href} onClick={() => setVisible(!visible)}>
-                <Text>{item.text}</Text>
+                <Text className={styles.textItem}>{item.text}</Text>
               </Link>
             </li>
           ))}

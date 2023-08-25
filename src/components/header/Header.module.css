@@ -4,10 +4,14 @@
   align-items: center;
   position: relative;
   padding: 0.722em .85em;
+  background: linear-gradient(to right, rgba(var(--color-bg-primary-rgba), .5) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 1000ms linear;
 }
 
 .headerVisible {
-  background-color: rgba(var(--color-bg-primary-rgba), .5);
+  background-position: left bottom;
 }
 
 .row {
@@ -68,11 +72,12 @@
 }
 
 .nav {
-  width: 100%;
+  width: 0%;
   visibility: hidden;
   position: absolute;
   top: 71px;
   left: 0;
+  transition: width 1000ms linear;
 }
 
 .navVisible {
@@ -80,6 +85,7 @@
   height: calc((var(--vh, 1vh) * 100) - 71px);
   background-color: rgba(var(--color-bg-primary-rgba), .5);
   z-index: 1;
+  width: 100%;
 }
 
 .navList {
@@ -117,14 +123,7 @@
     margin: 0 auto;
     padding-left: 0;
     padding-right: 0;
-  }
-
-  .headerVisible {
-    background-color: transparent;
-  }
-
-  .navVisible {
-    background-color: transparent;
+    background: transparent;
   }
 
   .navToggle {
@@ -136,6 +135,11 @@
     position: relative;
     top: 0;
     height: auto;
+    width: 100%;
+  }
+
+  .navVisible {
+    background-color: transparent;
   }
 
   .navList {

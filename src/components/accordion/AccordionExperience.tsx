@@ -105,6 +105,24 @@ const AccordionExperience = ({ className }: Props) => {
          like Node JS, PHP, and Java I worked on different projects with them as the PWA of Dafiti Store built with React and Redux\
          and other internal software projects with (NodeJS, React, Hooks).",
     },
+    {
+      id: 7,
+      open: true,
+      companyName: "4Smart",
+      clientName: "daviplata",
+      technologies: ["NodeJS", "AWS"],
+      location: "Bogota D.C - Colombia",
+      linkProject: {
+        link: "#",
+        text: "Chatbot Daviplata",
+      },
+      description:
+        "I was the architect and one of the main developers of a chatbot \
+        built with NodeJS that handles the communication of Daviplata's customers. \
+        The app uses WebSocket (Socket IO) to share messages among Clients, Agents and the bot \
+        The app connects to a trained IBM Watson bot using its API. The app supports around 2 million messages\
+        per hour",
+    },
   ];
   return (
     <div className={cx({ ...(className && { [className]: true }) })}>

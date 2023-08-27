@@ -12,6 +12,7 @@ type Props = {
   className?: string;
   companyName?: string;
   clientName?: string;
+  dateText?: string;
   location?: string;
   technologies?: Array<string>;
   description?: string;
@@ -28,6 +29,7 @@ const ExperienceCard = ({
   className,
   companyName = "Company name",
   clientName = "Client name",
+  dateText = "2013 May - 2014 Oct",
   location = "Location",
   technologies = [],
   description = "",
@@ -77,7 +79,7 @@ const ExperienceCard = ({
           </span>
         </div>
         <Text size="xxs" className={styles.dateInfo}>
-          2013 May - 2014 Oct
+          {dateText}
         </Text>
         <div className={styles.badgeContainer}>
           {technologies.map((technology) => (

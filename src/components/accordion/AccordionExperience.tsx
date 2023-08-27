@@ -21,10 +21,8 @@ const AccordionExperience = ({ className }: Props) => {
         text: "Achieve"
       },
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. \
-        Accusantium alias placeat temporibus quo aperiam commodi obcaecati \
-        molestiae fugit consectetur sint qui vitae fuga libero, iusto, velit \
-        a enim voluptatibus soluta!",
+        "Work in the migration from domains architecture to micro-services\
+        work migrating functions to micro-services with NodeJS, KOA and open-api 3.0",
     },
     {
       id: 2,
@@ -38,10 +36,12 @@ const AccordionExperience = ({ className }: Props) => {
         text: "The knot"
       },
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. \
-        Accusantium alias placeat temporibus quo aperiam commodi obcaecati \
-        molestiae fugit consectetur sint qui vitae fuga libero, iusto, velit \
-        a enim voluptatibus soluta!",
+        "Worked on the project of migrating the knot catalog to Contentful. \
+        had to build some jobs with NodeJS and NestJS that connect to the legacy catalog \
+        and then migrate the items to Contentful using Contentful GraphQL Content API \
+        I worked on the knot webpage as well which is developed with React \
+        my work was mainly in the Catalog page getting the items\
+        from Contentful and listed them in the webpage",
     },
     {
       id: 3,
@@ -55,10 +55,8 @@ const AccordionExperience = ({ className }: Props) => {
         text: "GoodRx"
       },
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. \
-        Accusantium alias placeat temporibus quo aperiam commodi obcaecati \
-        molestiae fugit consectetur sint qui vitae fuga libero, iusto, velit \
-        a enim voluptatibus soluta!",
+        "Develop totally reusable accessible react components which are connected to Contentful CMS. \
+        Each component that I worked on gets info from Contentful using the Contentful GraphQL Content API",
     },
     {
       id: 4,
@@ -72,10 +70,7 @@ const AccordionExperience = ({ className }: Props) => {
         text: "Casumo",
       },
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. \
-        Accusantium alias placeat temporibus quo aperiam commodi obcaecati \
-        molestiae fugit consectetur sint qui vitae fuga libero, iusto, velit \
-        a enim voluptatibus soluta!",
+        "Pending to update the description",
     },
     {
       id: 5,
@@ -89,10 +84,10 @@ const AccordionExperience = ({ className }: Props) => {
         text: "Cision",
       },
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. \
-        Accusantium alias placeat temporibus quo aperiam commodi obcaecati \
-        molestiae fugit consectetur sint qui vitae fuga libero, iusto, velit \
-        a enim voluptatibus soluta!",
+        "I worked with React, ES6, TypeScript, Redux, Groovy, and MySql. My main function \
+        was to develop new features that Cision app offers to its clients in the technologies named before\
+        Cision clients use the app to analyze its own brand in different \
+        mediums of communication and social networks. ",
     },
     {
       id: 6,
@@ -106,10 +101,9 @@ const AccordionExperience = ({ className }: Props) => {
         text: "Dafiti",
       },
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. \
-        Accusantium alias placeat temporibus quo aperiam commodi obcaecati \
-        molestiae fugit consectetur sint qui vitae fuga libero, iusto, velit \
-        a enim voluptatibus soluta!",
+        "I worked helping different software projects in Dafiti Latam developing software in different technologies\
+         like Node JS, PHP, and Java I worked on different projects with them as the PWA of Dafiti Store built with React and Redux\
+         and other internal software projects with (NodeJS, React, Hooks).",
     },
   ];
   return (

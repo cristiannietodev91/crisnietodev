@@ -53,16 +53,16 @@ const About = () => {
             career.
             <br />
             <br />
-            I am also a passionate Football fan chatting about best soccer
-            players and the best Football tournaments around the world of course
-            with a beer are sort of plans that bring me happiness. visiting
-            famous Football stadiums is always on my booked list.
-            <br />
-            <br />
             Last years journey working with US clients have been the most
             challenging project that I ever participate it has been a time of
             continue learning adapting a many years career to a different
             language but we great learnings.
+            <br />
+            <br />
+            I am a passionate Football fan as well chatting about best soccer
+            players and the best Football tournaments around the world of course
+            with a beer are sort of plans that bring me happiness. visiting
+            famous Football stadiums is always on my booked list.
           </Text>
         </section>
         <aside className={styles.sidebar}>

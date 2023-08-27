@@ -23,9 +23,7 @@ const Header = () => {
 
   return (
     <header
-      className={cx(styles.header, {
-        [styles.headerVisible]: visible,
-      })}
+      className={cx(styles.header)}
     >
       <Image
         src="/cn.svg"
@@ -39,6 +37,7 @@ const Header = () => {
         className={cx(styles.nav, {
           [styles.navVisible]: visible,
         })}
+        onClick={() => setVisible(!visible)}
       >
         <ul className={styles.navList}>
           {items.map((item) => (

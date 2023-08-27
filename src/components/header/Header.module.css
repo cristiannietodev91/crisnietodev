@@ -4,14 +4,6 @@
   align-items: center;
   position: relative;
   padding: 0.722em .85em;
-  background: linear-gradient(to right, rgba(var(--color-bg-primary-rgba), .5) 50%, transparent 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: background-position 1000ms linear;
-}
-
-.headerVisible {
-  background-position: left bottom;
 }
 
 .row {
@@ -75,14 +67,14 @@
   width: 0%;
   visibility: hidden;
   position: absolute;
-  top: 71px;
+  top: 0;
   left: 0;
-  transition: width 1000ms linear;
+  transition: width 1000ms ease-out;
 }
 
 .navVisible {
   visibility: visible;
-  height: calc((var(--vh, 1vh) * 100) - 71px);
+  height: calc((var(--vh, 1vh) * 100));
   background-color: rgba(var(--color-bg-primary-rgba), .5);
   z-index: 1;
   width: 100%;
@@ -92,6 +84,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-top: 71px;
 }
 
 .navItem {
@@ -108,6 +101,7 @@
 }
 
 .textItem {
+  color: var(--white);
   text-align: center;
 }
 
@@ -123,11 +117,14 @@
     margin: 0 auto;
     padding-left: 0;
     padding-right: 0;
-    background: transparent;
   }
 
   .navToggle {
     display: none;
+  }
+
+  .navVisible {
+    background-color: transparent;
   }
 
   .nav {
@@ -136,10 +133,7 @@
     top: 0;
     height: auto;
     width: 100%;
-  }
-
-  .navVisible {
-    background-color: transparent;
+    opacity: 1;
   }
 
   .navList {
@@ -169,6 +163,10 @@
   .navItem:hover:after {
     width: 100%;
     background: var(--color-text);
+  }
+
+  .textItem { 
+    color: var(--color-text);
   }
 
   .textItem:hover {

@@ -16,7 +16,7 @@
 }
 
 .logo:hover {
-  animation: logo-rotate 2s infinite linear;
+  animation: logo-rotate 2000ms infinite linear;
 }
 
 .navToggle {

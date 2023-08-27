@@ -21,3 +21,26 @@
   color: var(--color-text);
   font-size: 0.725rem;
 }
+
+.iconAnimated:hover {
+  animation: logo-bounce 1000ms 0s infinite ease-out;
+}
+
+@keyframes logo-bounce {
+  0% {
+    transform: rotate(-4deg);
+  }
+
+  20% {
+    transform: rotate(-10deg);
+  }
+
+  40% {
+    transform: rotate(-20deg);
+  }
+
+  100% {
+    transform: rotate(20deg) scale(1.2);
+  }
+}
+

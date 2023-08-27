@@ -19,22 +19,22 @@ const Contact = () => {
       alt: "Instagram Logo",
       width: 40,
       height: 40,
-      href: "#",
+      href: "https://www.instagram.com/cristiannieto91/",
     },
     {
       icon: FaLinkedin,
       alt: "LinkedIn Logo",
       width: 40,
       height: 40,
-      href: "#",
+      href: "https://www.linkedin.com/in/cristian-nieto-14209366/",
     },
-    { icon: FaGithub, alt: "Git Logo", width: 40, height: 40, href: "#" },
+    { icon: FaGithub, alt: "Git Logo", width: 40, height: 40, href: "https://github.com/cristiannietodev91" },
     {
       icon: FaStackOverflow,
       alt: "Git Logo",
       width: 40,
       height: 40,
-      href: "#",
+      href: "https://stackoverflow.com/users/3140797/cristian-nieto-dev",
     },
   ];
   return (

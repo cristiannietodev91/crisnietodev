@@ -21,6 +21,7 @@ type Props = {
   itemPerRow: number;
   className?: string;
   classNameRow?: string;
+  animated?: boolean;
 };
 
 const IconsCard = ({
@@ -28,6 +29,7 @@ const IconsCard = ({
   itemPerRow = 3,
   className,
   classNameRow,
+  animated = false,
 }: Props) => {
   const numberOfRows = Math.ceil(items.length / itemPerRow);
   return (
@@ -69,12 +71,17 @@ const IconsCard = ({
 
             if (Icon) {
               children = (
-                <Icon size={image.width} className={styles.icon}></Icon>
+                <Icon
+                  size={image.width}
+                  className={cx(styles.icon, {
+                    [styles.iconAnimated]: animated,
+                  })}
+                ></Icon>
               );
             }
 
             return href ? (
-              <Link key={Math.random()} href={href} target="_blank" >
+              <Link key={Math.random()} href={href} target="_blank">
                 {children}
               </Link>
             ) : (

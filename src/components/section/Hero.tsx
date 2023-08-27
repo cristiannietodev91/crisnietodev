@@ -72,6 +72,7 @@ const Hero = () => {
         itemPerRow={4}
         className={styles.iconsContainer}
         classNameRow={styles.iconsRow}
+        animated={true}
       ></IconsCard>
     </section>
   );

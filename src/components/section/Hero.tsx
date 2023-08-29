@@ -28,7 +28,13 @@ const Hero = () => {
       height: 30,
       href: "https://www.linkedin.com/in/cristian-nieto-14209366/",
     },
-    { icon: FaGithub, alt: "Git Logo", width: 30, height: 30, href: "https://github.com/cristiannietodev91" },
+    {
+      icon: FaGithub,
+      alt: "Git Logo",
+      width: 30,
+      height: 30,
+      href: "https://github.com/cristiannietodev91",
+    },
     {
       icon: FaStackOverflow,
       alt: "StackOverFlow Logo",
@@ -46,17 +52,20 @@ const Hero = () => {
           developer
         </Text>
         <Text size="lg" variant="primary">
-          Cristian
+          <span className={styles.titleAccent}>Cristian</span>
         </Text>
         <hr className={styles.hr}></hr>
       </div>
       <div className={styles.contentMd}>
         <Text size="xlg" variant="primary" className={styles.titleHero}>
-          Hello, I am Cristian, Full stack developer
+          Hello, I am <span className={styles.titleAccent}>Cristian</span>, Full
+          stack developer
         </Text>
         <Text size="sm" variant="primary">
-        I am a Fullstack engineer with +10 years of experience habituate to work on all-sizes companies and all types of business. 
-        working for a wide variety of clients and projects enhance my engineering skills day by day which I put into each project that I am involved in.
+          I am a Fullstack engineer with +10 years of experience habituate to
+          work on all-sizes companies and all types of business. working for a
+          wide variety of clients and projects enhance my engineering skills day
+          by day which I put into each project that I am involved in.
         </Text>
       </div>
       <Image

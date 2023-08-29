@@ -43,7 +43,7 @@ const About = () => {
             textAlign="center"
             className={styles.subtitleAbout}
           >
-            Full stack developer at Spark Digital
+            Full stack developer at <span className={styles.subtitleAccent}>Spark Digital</span>
           </Text>
           <Text size="sm" variant="primary" textAlign="justify">
             Software engineer based in Bogota, Colombia. From the beginning of

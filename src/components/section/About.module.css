@@ -7,6 +7,9 @@
   margin: 0.55em;
 }
 
+.subtitleAccent {
+  color: var(--primary);
+}
 
 .iconsContainerSM {
   border-radius: 0.52em;

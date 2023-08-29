@@ -37,7 +37,11 @@
 .iconsRow {
   display: flex;
   flex-direction: column;
-  gap: .3em;
+  gap: 0.3em;
+}
+
+.titleAccent {
+  color: var(--primary);
 }
 
 @media (min-width: 745px) {

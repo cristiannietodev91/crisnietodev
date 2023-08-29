@@ -67,18 +67,18 @@ const ExperienceCard = ({
         <div className={styles.subHeader}>
           <span className={styles.subHeaderIcon}>
             <FaMapMarkerAlt className={styles.icon}></FaMapMarkerAlt>
-            <Text size="xxs" inline>
+            <Text size="xs" inline>
               {location}
             </Text>
           </span>
           <span className={styles.subHeaderIcon}>
             <FaFlag className={styles.icon}></FaFlag>
-            <Text size="xxs" inline>
+            <Text size="xs" inline>
               {clientName}
             </Text>
           </span>
         </div>
-        <Text size="xxs" className={styles.dateInfo}>
+        <Text size="xxs">
           {dateText}
         </Text>
         <div className={styles.badgeContainer}>

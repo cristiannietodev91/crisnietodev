@@ -3,6 +3,12 @@
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 0.25em;
+  box-shadow: 3px 8px 8px rgba(var(--color-text-rgba),0.3);
+  transition: transform 300ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px) translateX(-2px);
 }
 
 .primary {
@@ -10,6 +16,7 @@
 }
 
 .outline {
+  color: var(--primary);
   border: 1px solid var(--primary);
 }
 
@@ -17,6 +24,7 @@
   font-size: 0.72rem;
   border-radius: 0.25em;
 }
+
 
 .button.sm {
   padding: 0.18em .75em;

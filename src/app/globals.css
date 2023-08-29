@@ -16,19 +16,21 @@
   --gray-800: #343A40;
   --gray-900: #343A40;
   --gray-1000: #212529;
-  --header-font-size: 5.0625rem; 
-  --title-font-size: 3.375rem; 
+  --header-font-size: 5.0625rem;
+  --title-font-size: 3.375rem;
   --sub-header-font-size: 2.25rem;
   --body-2-font-size: 1.5rem;
   --body-font-size: 1rem;
-  --caption-font-size: .725rem;
-  --caption-1-font-size: .5rem;
+  --caption-font-size: 0.725rem;
+  --caption-1-font-size: 0.5rem;
 }
 
 body,
 body[data-theme="light"] {
   --color-text: #070606;
+  --color-text-rgba: 7, 6, 6;
   --color-bg-primary: #F9F9F9;
+  --color-bg-primary-rgba: 249, 249, 249;
   --opacity-alpha-primary-text: 1;
   --opacity-alpha-secondary-text: 0.77;
   --opacity-alpha-disabled-text: 0.33;
@@ -39,7 +41,8 @@ body[data-theme="light"] {
 body,
 body[data-theme="dark"] {
   --color-text: #FFFFFF;
-  --color-bg-primary: #050B21;
+  --color-text-rgba: 255, 255, 255;
+  --color-bg-primary: #050b21;
   --color-bg-primary-rgba: 5, 11, 33;
   --opacity-alpha-primary-text: 1;
   --opacity-alpha-secondary-text: 0.73;
@@ -69,9 +72,9 @@ a {
   text-decoration: none;
 }
 
-button, 
+button,
 input {
-    font-family: inherit;
+  font-family: inherit;
 }
 
 @media (prefers-color-scheme: dark) {

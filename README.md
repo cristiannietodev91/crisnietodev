@@ -22,7 +22,7 @@ As I mentioned above the Figma design follows.
 
 ### CSS
 
-It is always good improve skills that are not usually used (Lately working mainly back-end).
+It is always good improve skills that are not frequently used (Lately working mainly back-end).
 
 ### React
 
@@ -42,10 +42,10 @@ That is why showing up this portfolio is a big step in my life as a developer si
 ## What is next
 
 
-- [ ] Load real data
+- [X] Load real data
 - [ ] Add SEO
 - [ ] Implement Internationalization
-- [ ] Add animations to different components
+- [X] Add animations to different components
 - [ ] Add storybook
 - [ ] Website/project images
 - [ ] Site most be accessible for screen readers

@@ -14,6 +14,7 @@ const AccordionExperience = ({ className }: Props) => {
       open: true,
       companyName: "Spark Digital",
       clientName: "Macmillan Education",
+      dateText: "Nov 2022 -  Present",
       technologies: ["Node JS", "KoaJS", "PostgreSQL", "OpenAPI"],
       location: "Remote",
       linkProject: {
@@ -21,15 +22,16 @@ const AccordionExperience = ({ className }: Props) => {
         text: "Achieve"
       },
       description:
-        "Work in the migration from domains architecture to micro-services\
-        work migrating functions to micro-services with NodeJS, KOA and open-api 3.0",
+        "Work in the migration from domains to micro-services architecture project.\
+        I work migrating functions to micro-services with NodeJS, KOA and open-api 3.0",
     },
     {
       id: 2,
       open: true,
       companyName: "Spark Digital",
       clientName: "The knot",
-      technologies: ["Node JS", "TypeScript", "Contentful"],
+      dateText: "May 2022 - Oct 2022",
+      technologies: ["NodeJS", "NestJS" ,"TypeScript", "Contentful"],
       location: "Remote",
       linkProject: {
         link: "https://www.theknot.com/",
@@ -48,6 +50,7 @@ const AccordionExperience = ({ className }: Props) => {
       open: true,
       companyName: "Deviget LLC",
       clientName: "GoodRx",
+      dateText: "Nov 2021 - May 2022",
       technologies: ["React", "Contentful", "TypeScript"],
       location: "Remote",
       linkProject: {
@@ -55,14 +58,16 @@ const AccordionExperience = ({ className }: Props) => {
         text: "GoodRx"
       },
       description:
-        "Develop totally reusable accessible react components which are connected to Contentful CMS. \
-        Each component that I worked on gets info from Contentful using the Contentful GraphQL Content API",
+        "Develop totally reusable accessible react components which extends Contentful CMS UI. \
+        Each component that I worked on gets info from Contentful using the Contentful GraphQL Content API\
+        and used for Contentful editors to build GoodRx web pages",
     },
     {
       id: 4,
       open: true,
       companyName: "Incredible Web",
       clientName: "Casumo",
+      dateText: "Jul 2021 - May 2022",
       technologies: ["React", "Contentful"],
       location: "Malta",
       linkProject: {
@@ -70,22 +75,25 @@ const AccordionExperience = ({ className }: Props) => {
         text: "Casumo",
       },
       description:
-        "Pending to update the description",
+        "Worked on a project that builds customs React components to extend Contentful UI\
+        those components where then used for editors to build Casumo Web pages\
+        in different country and languages",
     },
     {
       id: 5,
       open: true,
       companyName: "Avantica",
       clientName: "Cision",
-      technologies: ["React"],
-      location: "Bogota D.C - Colombia",
+      dateText: "Nov 2020 - Oct 2021",
+      technologies: ["React", "Redux", "TypeScript", "ES6", "Groovy"],
+      location: "Colombia",
       linkProject: {
         link: "https://www.cision.com/about/",
         text: "Cision",
       },
       description:
-        "I worked with React, ES6, TypeScript, Redux, Groovy, and MySql. My main function \
-        was to develop new features that Cision app offers to its clients in the technologies named before\
+        "My main function was to develop new features that \
+        Cision app offers to its clients in the technologies named above\
         Cision clients use the app to analyze its own brand in different \
         mediums of communication and social networks. ",
     },
@@ -95,7 +103,7 @@ const AccordionExperience = ({ className }: Props) => {
       companyName: "Dafiti",
       clientName: "Dafiti",
       technologies: ["React"],
-      location: "Bogota D.C - Colombia",
+      location: "Colombia",
       linkProject: {
         link: "https://www.dafiti.com.co",
         text: "Dafiti",
@@ -111,7 +119,7 @@ const AccordionExperience = ({ className }: Props) => {
       companyName: "4Smart",
       clientName: "daviplata",
       technologies: ["NodeJS", "AWS"],
-      location: "Bogota D.C - Colombia",
+      location: "Colombia",
       linkProject: {
         link: "#",
         text: "Chatbot Daviplata",
@@ -119,7 +127,7 @@ const AccordionExperience = ({ className }: Props) => {
       description:
         "I was the architect and one of the main developers of a chatbot \
         built with NodeJS that handles the communication of Daviplata's customers. \
-        The app uses WebSocket (Socket IO) to share messages among Clients, Agents and the bot \
+        The app uses WebSocket (Socket IO) to share messages among Clients, Agents and the bot. \
         The app connects to a trained IBM Watson bot using its API. The app supports around 2 million messages\
         per hour",
     },
@@ -135,6 +143,7 @@ const AccordionExperience = ({ className }: Props) => {
           technologies={experience.technologies}
           description={experience.description}
           clientName={experience.clientName}
+          dateText={experience.dateText}
           location={experience.location}
           linkProject={experience.linkProject}
           collapsible={false}

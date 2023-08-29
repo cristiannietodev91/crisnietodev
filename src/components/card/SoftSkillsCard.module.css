@@ -10,12 +10,13 @@
     width: 48%;
     margin: 0.7em auto;
     box-shadow: 3px 5px 7px rgba(var(--primary-rgba), .6);
+    transition: color 300ms ease,
+                border 300ms ease;
 }
 
 .container:hover {
   border: 1px solid var(--primary);
   color: var(--primary)
-
 }
 
 .title {

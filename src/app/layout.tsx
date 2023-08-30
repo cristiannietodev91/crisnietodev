@@ -8,7 +8,7 @@ import Footer from "@/components/footer/Footer";
 const exo2 = Exo_2({ subsets: ["latin"], variable: "--font-exo2" });
 
 export const metadata = {
-  title: "Cristian Nieto",
+  title: "Cristian Nieto | Developer | Engineer",
   description: "Cristian Nieto developer portfolio",
 };
 

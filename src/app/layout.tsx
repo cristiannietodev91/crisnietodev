@@ -5,11 +5,15 @@ import { Exo_2 } from "next/font/google";
 import styles from "./layout.module.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import { Metadata } from "next";
 const exo2 = Exo_2({ subsets: ["latin"], variable: "--font-exo2" });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Cristian Nieto | Developer | Engineer",
   description: "Cristian Nieto developer portfolio",
+  verification: {
+    google: "_zmnW7eLhbxrhkxBaUzs6boWBnesR8dBs0RUZaO7CAc"
+  }
 };
 
 export default function RootLayout({

@@ -1,8 +1,9 @@
 import "./globals.css";
+import Image from "next/image";
+import Script from 'next/script'
 import { Exo_2 } from "next/font/google";
 import styles from "./layout.module.css";
 import Header from "@/components/header/Header";
-import Image from "next/image";
 import Footer from "@/components/footer/Footer";
 
 const exo2 = Exo_2({ subsets: ["latin"], variable: "--font-exo2" });
@@ -62,6 +63,16 @@ export default function RootLayout({
           className={styles.profileMd}
         />
       </body>
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+        `}
+      </Script>
     </html>
   );
 }

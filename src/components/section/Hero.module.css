@@ -44,6 +44,10 @@
   color: var(--primary);
 }
 
+.downloadButton {
+  margin-bottom: 1.2em;
+}
+
 @media (min-width: 745px) {
   .contentSm {
     display: none;

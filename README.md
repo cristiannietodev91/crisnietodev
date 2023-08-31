@@ -43,7 +43,7 @@ That is why showing up this portfolio is a big step in my life as a developer si
 
 
 - [X] Load real data
-- [ ] Add SEO
+- [X] Add SEO
 - [ ] Implement Internationalization
 - [X] Add animations to different components
 - [ ] Add storybook

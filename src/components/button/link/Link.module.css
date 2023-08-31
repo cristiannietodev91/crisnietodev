@@ -25,7 +25,19 @@
   border-radius: 0.25em;
 }
 
+.md {
+  font-size: 1rem;
+}
+
+.button.primary {
+  background-color: var(--primary);
+}
 
 .button.sm {
   padding: 0.18em .75em;
 }
+
+.button.md {
+  padding: 0.22em .75em;
+}
+

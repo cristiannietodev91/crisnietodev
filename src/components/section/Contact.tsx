@@ -3,7 +3,6 @@
 import React from "react";
 import Text from "../text/Text";
 import styles from "./Contact.module.css";
-import Button from "../button/button/Button";
 import IconsCard from "../card/IconsCard";
 import {
   FaInstagram,
@@ -11,6 +10,7 @@ import {
   FaGithub,
   FaStackOverflow,
 } from "react-icons/fa";
+import Link from "../button/link/Link";
 
 const Contact = () => {
   const socialNetworkIcons = [
@@ -58,7 +58,7 @@ const Contact = () => {
       >
         Interested in working together? My inbox is always open lets queue up a time to chat.
       </Text>
-      <Button size="md">Contact</Button>
+      <Link size="md" button href="mailto:cristianandresnieto@gmail.com" target="_top">Contact</Link>
       <IconsCard
         items={socialNetworkIcons}
         itemPerRow={4}

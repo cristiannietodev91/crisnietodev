@@ -5,11 +5,11 @@ import Contact from "@/components/section/Contact";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Hero></Hero>
       <About></About>
       <Experience></Experience>
       <Contact></Contact>
-    </div>
+    </>
   );
 }

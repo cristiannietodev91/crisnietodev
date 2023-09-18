@@ -65,10 +65,11 @@ const Hero = () => {
           stack developer
         </Text>
         <Text size="sm" variant="primary">
-          I am a Fullstack engineer with +10 years of experience habituate to
-          work on all-sizes companies and all types of business. working for a
-          wide variety of clients and projects enhance my engineering skills day
-          by day which I put into each project that I am involved in.
+          I am a Fullstack engineer with +10 years of experience habituated to work on 
+          all-sizes companies and all types of business. My experience is in the back-end with Java and NodeJS, 
+          and in the front-end with React, Vue, and ReactNative. 
+          work for a wide variety of clients and projects have enhanced my engineering skills
+          which I will put into each coming project that I will involved in.
         </Text>
       </div>
       <Image

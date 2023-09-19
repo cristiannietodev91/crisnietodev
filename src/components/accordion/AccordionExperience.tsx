@@ -15,15 +15,16 @@ const AccordionExperience = ({ className }: Props) => {
       companyName: "Spark Digital",
       clientName: "Macmillan Education",
       dateText: "Nov 2022 -  Present",
-      technologies: ["Node JS", "KoaJS", "PostgreSQL", "OpenAPI"],
+      technologies: ["Node JS", "KoaJS", "PostgreSQL", "OpenAPI", "Jest"],
       location: "Remote",
       linkProject: {
         link: "https://achieve.macmillanlearning.com/start",
         text: "Achieve"
       },
       description:
-        "Work in the migration from domains to micro-services architecture project.\
-        I work migrating functions to micro-services with NodeJS, KOA and open-api 3.0",
+        "Work on the migration from domains to micro-services architecture project\
+        in the Macmillan client. I work migrating functions to micro-services with\
+        NodeJS, KOA and open-api 3.0.",
     },
     {
       id: 2,
@@ -38,12 +39,12 @@ const AccordionExperience = ({ className }: Props) => {
         text: "The knot"
       },
       description:
-        "Worked on the project of migrating the knot catalog to Contentful. \
-        had to build some jobs with NodeJS and NestJS that connect to the legacy catalog \
-        and then migrate the items to Contentful using Contentful GraphQL Content API \
-        I worked on the knot webpage as well which is developed with React \
-        my work was mainly in the Catalog page getting the items\
-        from Contentful and listed them in the webpage",
+        "Worked on the project of migrating the Knot catalog to Contentful. \
+        had to build some jobs with NodeJS and NestJS that connect to the legacy \
+        catalog and then migrate the items to Contentful using Contentful \
+        GraphQL Content API I worked on the Knot webpage as well which is \
+        developed with React my work was mainly in the Catalog page getting \
+        the items from Contentful and listed them in the webpage.",
     },
     {
       id: 3,
@@ -51,16 +52,17 @@ const AccordionExperience = ({ className }: Props) => {
       companyName: "Deviget LLC",
       clientName: "GoodRx",
       dateText: "Nov 2021 - May 2022",
-      technologies: ["React", "Contentful", "TypeScript"],
+      technologies: ["React", "Contentful", "TypeScript", "GraphQL", "Styled components", "Chakra UI", "Storybook"],
       location: "Remote",
       linkProject: {
         link: "https://www.goodrx.com/",
         text: "GoodRx"
       },
       description:
-        "Develop totally reusable accessible react components which extends Contentful CMS UI. \
-        Each component that I worked on gets info from Contentful using the Contentful GraphQL Content API\
-        and used for Contentful editors to build GoodRx web pages",
+        "React developer working with two clients based in Silicon Valley within both clients \
+        I work developing totally reusable and accessible React components which are connected to contentful CMS. \
+        Here we integrate CMS to React 16 using hooks and GraphQL so each component is represented \
+        based on the information received from the CMS gotten with GraphQL",
     },
     {
       id: 4,
@@ -68,16 +70,16 @@ const AccordionExperience = ({ className }: Props) => {
       companyName: "Incredible Web",
       clientName: "Casumo",
       dateText: "Jul 2021 - May 2022",
-      technologies: ["React", "Contentful"],
+      technologies: ["React", "Contentful", "Storybook"],
       location: "Malta",
       linkProject: {
         link: "https://www.casumo.com/en",
         text: "Casumo",
       },
       description:
-        "Worked on a project that builds customs React components to extend Contentful UI\
-        those components where then used for editors to build Casumo Web pages\
-        in different country and languages",
+        "Worked with the client Casumo on a project that builds custom React components\
+        to extend Contentful UI those components were then used by Contentful editors\
+        to build Casumo Web pages for different countries and languages.",
     },
     {
       id: 5,
@@ -92,10 +94,9 @@ const AccordionExperience = ({ className }: Props) => {
         text: "Cision",
       },
       description:
-        "My main function was to develop new features that \
-        Cision app offers to its clients in the technologies named above\
-        Cision clients use the app to analyze its own brand in different \
-        mediums of communication and social networks. ",
+        "I work for Cision client, a client based in USA that helps all its clients analyze \
+        their brand in different mediums of communication \
+        and social networks to make better decisions in the market.",
     },
     {
       id: 6,

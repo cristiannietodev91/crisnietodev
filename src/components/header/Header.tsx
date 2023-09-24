@@ -5,8 +5,8 @@ import dynamic from "next/dynamic";
 import cx from "classnames";
 import Image from "next/image";
 import styles from "./Header.module.css";
-import Link from "../button/link/Link";
 import Text from "../text/Text";
+import Link from "../next/Link";
 
 const ButtonIcon = dynamic(() => import("../button/icon/ButtonIcon"), {
   ssr: false,
@@ -42,7 +42,7 @@ const Header = () => {
         <ul className={styles.navList}>
           {items.map((item) => (
             <li key={item.text} className={styles.navItem}>
-              <Link href={item.href} onClick={() => setVisible(!visible)}>
+              <Link href={item.href} onClick={() => setVisible(!visible)} isCustom className={styles.linkItem}>
                 <Text className={styles.textItem}>{item.text}</Text>
               </Link>
             </li>

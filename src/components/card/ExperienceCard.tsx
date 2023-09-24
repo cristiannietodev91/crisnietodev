@@ -6,7 +6,7 @@ import { FaMapMarkerAlt, FaFlag, FaChevronDown } from "react-icons/fa";
 import styles from "./ExperienceCard.module.css";
 import Text from "../text/Text";
 import Badge from "../badge/Badge";
-import Link from "../button/link/Link";
+import Link from "../next/Link";
 
 type Props = {
   className?: string;
@@ -94,7 +94,7 @@ const ExperienceCard = ({
           {description}
         </Text>
         <div className={styles.buttonContainer}>
-          <Link variant="outline" href={linkProject.link} button target="_blank">
+          <Link variant="primary" outline href={linkProject.link} target="_blank" style={{ textTransform: "uppercase"}}>
             {linkProject.text}
           </Link>
         </div>

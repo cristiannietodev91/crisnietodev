@@ -6,8 +6,7 @@ import cx from "classnames";
 import styles from "./IconsCard.module.css";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { IconType } from "react-icons";
-import Link from "../button/link/Link";
-import { UrlObject } from "url";
+import Link from "../next/Link";
 
 type Props = {
   items: Array<{
@@ -16,7 +15,7 @@ type Props = {
     width: number;
     height: number;
     icon?: IconType;
-    href?: string | UrlObject;
+    href?: string;
   }>;
   itemPerRow: number;
   className?: string;
@@ -81,7 +80,7 @@ const IconsCard = ({
             }
 
             return href ? (
-              <Link key={Math.random()} href={href} target="_blank">
+              <Link key={Math.random()} href={href} target="_blank" variant="plain" className={styles.customButton} isCustom>
                 {children}
               </Link>
             ) : (

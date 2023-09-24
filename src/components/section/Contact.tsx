@@ -10,7 +10,7 @@ import {
   FaGithub,
   FaStackOverflow,
 } from "react-icons/fa";
-import Link from "../button/link/Link";
+import Link from "../next/Link";
 
 const Contact = () => {
   const socialNetworkIcons = [
@@ -26,7 +26,7 @@ const Contact = () => {
       alt: "LinkedIn Logo",
       width: 40,
       height: 40,
-      href: "https://www.linkedin.com/in/cristian-nieto-14209366/",
+      href: "https://www.linkedin.com/in/cristian-andres-nieto-garcia-14209366/",
     },
     { icon: FaGithub, alt: "Git Logo", width: 40, height: 40, href: "https://github.com/cristiannietodev91" },
     {
@@ -58,7 +58,7 @@ const Contact = () => {
       >
         Interested in working together? My inbox is always open lets queue up a time to chat.
       </Text>
-      <Link size="md" button href="mailto:cristianandresnieto@gmail.com" target="_top">Contact</Link>
+      <Link size="lg" href="mailto:cristianandresnieto@gmail.com" target="_top">Contact</Link>
       <IconsCard
         items={socialNetworkIcons}
         itemPerRow={4}

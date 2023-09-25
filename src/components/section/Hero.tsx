@@ -27,7 +27,7 @@ const Hero = () => {
       alt: "LinkedIn Logo",
       width: 30,
       height: 30,
-      href: "https://www.linkedin.com/in/cristian-nieto-14209366/",
+      href: "https://www.linkedin.com/in/cristian-andres-nieto-garcia-14209366/",
     },
     {
       icon: FaGithub,

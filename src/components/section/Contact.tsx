@@ -26,7 +26,7 @@ const Contact = () => {
       alt: "LinkedIn Logo",
       width: 40,
       height: 40,
-      href: "https://www.linkedin.com/in/cristian-nieto-14209366/",
+      href: "https://www.linkedin.com/in/cristian-andres-nieto-garcia-14209366/",
     },
     { icon: FaGithub, alt: "Git Logo", width: 40, height: 40, href: "https://github.com/cristiannietodev91" },
     {

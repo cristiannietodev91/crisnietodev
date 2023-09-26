@@ -18,7 +18,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: {git fetch
+
   children: React.ReactNode;
 }) {
   const setInitialTheme = `
@@ -41,8 +42,8 @@ export default function RootLayout({
   `;
 
   return (
-    <html lang="en">
-      <body className={exo2.className}>
+    <html lang="en" className={exo2.className}>
+      <body>
         <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
         <Header></Header>
         <main className={styles.main}>{children}</main>

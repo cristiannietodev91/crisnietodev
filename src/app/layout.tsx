@@ -6,6 +6,7 @@ import styles from "./layout.module.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import { Metadata } from "next";
+import '@cristian.nieto.dev/cs-forms/dist/css/styles.css'
 const exo2 = Exo_2({ subsets: ["latin"], variable: "--font-exo2" });
 
 export const metadata: Metadata = {

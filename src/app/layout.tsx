@@ -18,9 +18,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {git fetch
-
-  children: React.ReactNode;
+}: {children: React.ReactNode;
 }) {
   const setInitialTheme = `
     function getUserPreference() {

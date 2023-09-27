@@ -26,6 +26,11 @@
   animation: logo-bounce 1000ms 0s infinite ease-out;
 }
 
+.customButton {
+  margin: 0;
+  padding: 0;
+}
+
 @keyframes logo-bounce {
   0% {
     transform: rotate(-4deg);

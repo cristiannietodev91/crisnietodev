@@ -100,6 +100,11 @@
   background-position: left bottom;
 }
 
+.linkItem {
+  width: 100%;
+  color: var(--color-text);
+}
+
 .textItem {
   text-align: center;
 }

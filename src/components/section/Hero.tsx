@@ -11,7 +11,8 @@ import {
   FaGithub,
   FaStackOverflow,
 } from "react-icons/fa";
-import Link from "../button/link/Link";
+import Link from "../next/Link";
+
 
 const Hero = () => {
   const socialNetworkIcons = [
@@ -48,7 +49,7 @@ const Hero = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.contentSm}>
-        <Link button href="/resume.pdf" target="_blank" size="md" className={styles.downloadButton}>Download CV</Link>
+        <Link href="/resume.pdf" target="_blank" size="md" variant="primary" className={styles.downloadButton}>Download CV</Link>
         <Text size="md" variant="primary">
           Full stack <br />
           developer
@@ -59,7 +60,7 @@ const Hero = () => {
         <hr className={styles.hr}></hr>
       </div>
       <div className={styles.contentMd}>
-        <Link button href="/resume.pdf" target="_blank" size="md" className={styles.downloadButton}>Download CV</Link>
+        <Link href="/resume.pdf" target="_blank" size="md" variant="primary">Download CV</Link>
         <Text size="xlg" variant="primary" className={styles.titleHero}>
           Hello, I am <span className={styles.titleAccent}>Cristian</span>, Full
           stack developer

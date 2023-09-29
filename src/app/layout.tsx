@@ -6,8 +6,8 @@ import styles from "./layout.module.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import { Metadata } from "next";
-import '@cristian.nieto.dev/cs-forms/dist/css/styles.css'
 const exo2 = Exo_2({ subsets: ["latin"], variable: "--font-exo2" });
+import { NextSSRInjectStyle } from '@cristian.nieto.dev/cs-forms';
 
 export const metadata: Metadata = {
   title: "Cristian Nieto | Developer | Engineer",
@@ -43,6 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={exo2.className}>
+        <NextSSRInjectStyle />
         <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
         <Header></Header>
         <main className={styles.main}>{children}</main>

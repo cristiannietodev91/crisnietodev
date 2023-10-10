@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Text from "../text/Text";
+import { Text } from "@cristian.nieto.dev/cs-forms";
 import IconsCard from "../card/IconsCard";
 import SoftSkillContainer from "../container/SoftSkillContainer";
 import styles from "./About.module.css";
@@ -28,7 +28,7 @@ const About = () => {
   return (
     <main id="about">
       <Text
-        size="lg"
+        size="xlg"
         variant="primary"
         textAlign="center"
         className={styles.titleAbout}
@@ -38,14 +38,14 @@ const About = () => {
       <div className={styles.aboutSection}>
         <section className={styles.rightSection}>
           <Text
-            size="md"
+            size="lg"
             variant="primary"
             textAlign="center"
             className={styles.subtitleAbout}
           >
             Full stack developer at <span className={styles.subtitleAccent}>Spark Digital</span>
           </Text>
-          <Text size="sm" variant="primary" textAlign="justify">
+          <Text size="md" variant="primary" textAlign="justify">
             Software engineer based in Bogota, Colombia. From the beginning of
             my career, I highlighted as a developer, and when you are good at
             doing something you feel in love with that. That drove me to learn a

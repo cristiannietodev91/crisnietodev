@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import cx from "classnames";
 import { FaMapMarkerAlt, FaFlag, FaChevronDown } from "react-icons/fa";
 import styles from "./ExperienceCard.module.css";
-import Text from "../text/Text";
+import { Text } from "@cristian.nieto.dev/cs-forms";
 import Badge from "../badge/Badge";
 import Link from "../next/Link";
 
@@ -52,7 +52,7 @@ const ExperienceCard = ({
         })}
         {...(collapsible && { onClick: () => setOpen(!isOpen) })}
       >
-        <Text size="md" textAlign="center" className={styles.title}>
+        <Text size="lg" textAlign="center" className={styles.title}>
           {companyName}
         </Text>
         {collapsible && (
@@ -67,18 +67,18 @@ const ExperienceCard = ({
         <div className={styles.subHeader}>
           <span className={styles.subHeaderIcon}>
             <FaMapMarkerAlt className={styles.icon}></FaMapMarkerAlt>
-            <Text size="xs" inline>
+            <Text size="sm" inline>
               {location}
             </Text>
           </span>
           <span className={styles.subHeaderIcon}>
             <FaFlag className={styles.icon}></FaFlag>
-            <Text size="xs" inline>
+            <Text size="sm" inline>
               {clientName}
             </Text>
           </span>
         </div>
-        <Text size="xxs">
+        <Text size="xs">
           {dateText}
         </Text>
         <div className={styles.badgeContainer}>
@@ -90,7 +90,7 @@ const ExperienceCard = ({
             ></Badge>
           ))}
         </div>
-        <Text size="sm" textAlign="justify">
+        <Text size="md" textAlign="justify">
           {description}
         </Text>
         <div className={styles.buttonContainer}>

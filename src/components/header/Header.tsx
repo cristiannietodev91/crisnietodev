@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import cx from "classnames";
 import Image from "next/image";
 import styles from "./Header.module.css";
-import Text from "../text/Text";
+import { Text } from "@cristian.nieto.dev/cs-forms";
 import Link from "../next/Link";
 
 const ButtonIcon = dynamic(() => import("../button/icon/ButtonIcon"), {

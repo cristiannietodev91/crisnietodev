@@ -1,11 +1,11 @@
 import React from 'react'
-import Text from '../text/Text'
+import { Text } from "@cristian.nieto.dev/cs-forms";
 import styles from './Footer.module.css';
 
 const Footer = () => {
   return (
     <span className={styles.footer}>
-     <Text size='xs' textAlign='center'>&#169; 2023 Copyright - Designed & built by Cristian Nieto</Text>
+     <Text size='sm' textAlign='center'>&#169; 2023 Copyright - Designed & built by Cristian Nieto</Text>
     </span>
   )
 }

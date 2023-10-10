@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Text from "../text/Text";
+import { Text } from "@cristian.nieto.dev/cs-forms";
 import styles from "./Contact.module.css";
 import IconsCard from "../card/IconsCard";
 import {
@@ -39,11 +39,11 @@ const Contact = () => {
   ];
   return (
     <div id="contact" className={styles.container}>
-      <Text size="lg" variant="primary" textAlign="center">
+      <Text size="xlg" variant="primary" textAlign="center">
         Contact me
       </Text>
       <Text
-        size="md"
+        size="lg"
         variant="primary"
         textAlign="center"
         className={styles.middleText}
@@ -51,7 +51,7 @@ const Contact = () => {
         Get in touch
       </Text>
       <Text
-        size="sm"
+        size="md"
         variant="primary"
         textAlign="center"
         className={styles.detail}

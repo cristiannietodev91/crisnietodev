@@ -10,6 +10,7 @@ import Link from "../next/Link";
 
 const ButtonIcon = dynamic(() => import("../button/icon/ButtonIcon"), {
   ssr: false,
+  loading: () => <div className={styles.toggleContainer}></div>,
 });
 
 const items = [

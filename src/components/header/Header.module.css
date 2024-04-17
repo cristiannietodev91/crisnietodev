@@ -113,6 +113,11 @@
   transform: scale(1.2);
 }
 
+.toggleContainer {
+  width: 16px;
+  height: 19.5px;
+}
+
 @media (min-width: 745px) {
   .header {
     display: flex;

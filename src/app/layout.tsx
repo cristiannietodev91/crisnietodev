@@ -50,7 +50,7 @@ export default function RootLayout({
         <footer className={styles.main}>
           <Footer></Footer>
         </footer>
-        <Image
+        {/* <Image
           src="/profile.png"
           alt="Developer profile"
           width={450}
@@ -65,7 +65,7 @@ export default function RootLayout({
           height={1024}
           priority
           className={styles.profileMd}
-        />
+        /> */}
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GOOGLE_GTM}" height="0" width="0" style="display: none; visibility: hidden;"></iframe>`,

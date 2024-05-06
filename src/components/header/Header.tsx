@@ -17,6 +17,7 @@ const items = [
   { href: "#about", text: "About" },
   { href: "#experience", text: "Experience" },
   { href: "#contact", text: "Contact" },
+  { href: "/blog", text: "Blog" },
 ];
 
 const Header = () => {

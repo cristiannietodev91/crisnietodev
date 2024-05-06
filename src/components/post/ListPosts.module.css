@@ -1,0 +1,38 @@
+.desktopContainer {
+    width: 100vw;
+    display: none;
+    background-color: var(--blue-200);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 3em 0;
+}
+
+.topPostContainer {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.leftTopPost {
+    width: 55%;
+}
+
+.rightTopPost {
+    width: 40%;
+}
+
+@media (min-width: 900px) {
+    .desktopContainer {
+        display: block;
+    }
+
+    .blogsContainer {
+        padding: 65em 4em 0; 
+    }
+}

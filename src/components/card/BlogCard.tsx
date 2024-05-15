@@ -66,9 +66,9 @@ const BlogCard = ({ imageProps, authorImage, authorName, datePublished, title, d
                         {authorName}
                     </Text>
                 </div>
-                <Text size="xlg">{title}</Text>
+                <Text size="xlg" textAlign='justify'>{title}</Text>
                 {datePublished && datePublished.length > 0 && <Text size="md">{datePublished}</Text>}
-                {description && description.length > 0 && <Text size="md">{description}</Text>}
+                {description && description.length > 0 && <Text size="md" textAlign='justify'>{description}</Text>}
                 {tags && tags.length > 0 && (
                     <div className={styles.badgeContainer}>
                         {tags.map((tag) => (

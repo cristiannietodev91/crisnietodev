@@ -1,7 +1,7 @@
 .blogCard {
     display: flex;
     flex-direction: column;
-    gap: 0.25em;
+    gap: 0.35em;
     padding-bottom: 1.5em;
 }
 
@@ -24,7 +24,6 @@
 .authorInfo {
     display: flex;
     align-items: center;
-    padding: 0.3em 0;
 }
 
 .nameAuthor {
@@ -52,9 +51,14 @@
 }
 
 @media (min-width: 900px) {
+    
+    .blogCard {
+        gap: 0.1em;
+    }
 
     .horizontal {
         flex-direction: row;
+        gap: 1.5em;
     }
 
     .horizontalContent { 

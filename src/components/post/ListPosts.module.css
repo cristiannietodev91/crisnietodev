@@ -6,7 +6,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    padding: 3em 0;
+    padding: 2em 0;
 }
 
 .topPostContainer {
@@ -55,6 +55,12 @@
     }
 
     .blogsContainer {
-        padding: 75em 4em 0;
+        padding: 66em 4em 0;
+    }
+}
+
+@media (min-width: 1000px) {
+    .blogsContainer {
+        padding: 62em 4em 0;
     }
 }

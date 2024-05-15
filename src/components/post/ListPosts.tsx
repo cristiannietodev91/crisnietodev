@@ -113,16 +113,16 @@ const ListPosts = ({ entries }: Props) => {
                                     className={styles.topBlogStyle}
                                     renderDescription={false}
                                     renderPublishedDate={false}
-                                    imagePostProps={{ width: 100, height: 100 }}
+                                    imagePostProps={{ width: 500, height: 300, responsive: false }}
                                 />
                             )}
                             {entries && entries[2] && (
                                 <RenderBlogCard
-                                    item={entries[1]}
+                                    item={entries[2]}
                                     className={styles.topBlogStyle}
                                     renderDescription={false}
                                     renderPublishedDate={false}
-                                    imagePostProps={{ width: 150, height: 150 }}
+                                    imagePostProps={{ width: 500, height: 300, responsive: false }}
                                 />
                             )}
                         </div>

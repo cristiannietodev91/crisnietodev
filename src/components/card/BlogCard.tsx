@@ -23,9 +23,10 @@ type Props = {
     description?: string;
     tags: string[],
     variant?: "vertical" | "horizontal"
+    className?: string;
 }
 
-const BlogCard = ({ imageProps, authorImage, authorName, datePublished, title, description, tags = [], variant = "vertical" }: Props) => {
+const BlogCard = ({ imageProps, authorImage, authorName, datePublished, title, description, tags = [], variant = "vertical", className }: Props) => {
 
 
     const renderImage = () => {
@@ -65,18 +66,20 @@ const BlogCard = ({ imageProps, authorImage, authorName, datePublished, title, d
                         {authorName}
                     </Text>
                 </div>
-                <Text size="xlg" className={styles.titleStyle}>{title}</Text>
+                <Text size="xlg">{title}</Text>
                 {datePublished && datePublished.length > 0 && <Text size="md">{datePublished}</Text>}
                 {description && description.length > 0 && <Text size="md">{description}</Text>}
-                <div className={styles.badgeContainer}>
-                    {tags.map((tag) => (
-                        <Badge
-                            key={tag}
-                            text={tag}
-                            className={styles.badge}
-                        ></Badge>
-                    ))}
-                </div>
+                {tags && tags.length > 0 && (
+                    <div className={styles.badgeContainer}>
+                        {tags.map((tag) => (
+                            <Badge
+                                key={tag}
+                                text={tag}
+                                className={styles.badge}
+                            ></Badge>
+                        ))}
+                    </div>
+                )}
             </>
         )
     };
@@ -109,7 +112,8 @@ const BlogCard = ({ imageProps, authorImage, authorName, datePublished, title, d
 
     return (
         <div className={cx(styles.blogCard, {
-            [styles.horizontal]: variant === "horizontal"
+            [styles.horizontal]: variant === "horizontal",
+            ...(className && { [className]: true }),
         })}>
             {renderImage()}
             {variant === "vertical" && renderVerticalVariant()}

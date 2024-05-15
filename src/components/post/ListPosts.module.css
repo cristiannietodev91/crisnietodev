@@ -27,12 +27,34 @@
     width: 40%;
 }
 
+.topBlogStyle {
+    color: var(--white)
+}
+
+.noBlogsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 150px);
+}
+
+.noBlogsImageContainer {
+    width: 80%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.emptyFirstDescription {
+    margin-bottom: 1em;
+}
+
 @media (min-width: 900px) {
     .desktopContainer {
         display: block;
     }
 
     .blogsContainer {
-        padding: 65em 4em 0; 
+        padding: 75em 4em 0;
     }
 }

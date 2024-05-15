@@ -1,10 +1,20 @@
 import BlogCard from "@/components/card/BlogCard";
-import { TypeComponentAuthorSkeleton, TypePageBlogPostSkeleton } from "../../../@types/generated";
+import { TypePageBlogPostSkeleton } from "../../../@types/generated";
 import { client } from "../../lib/contentful/client";
 import ListPosts from "@/components/post/ListPosts";
 
 export default async function Blog() {
-  const res = await client.getEntries<TypePageBlogPostSkeleton>({ content_type: 'pageBlogPost' });
+  const res = await client.withoutUnresolvableLinks.getEntries<TypePageBlogPostSkeleton>({ content_type: 'pageBlogPost' });
 
-  return <ListPosts entries={[]}></ListPosts>;
+  const items = res.items.map((item)=> {
+    return {
+      ...item,
+      fields: {
+        ...item.fields,
+        relatedBlogPosts: []
+      }
+    }
+  });
+  
+  return <ListPosts entries={[items[0], items[1], items[2]]}></ListPosts>;
 }

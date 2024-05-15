@@ -17,8 +17,8 @@ export interface TypePageBlogPostFields {
 
 export type TypePageBlogPostSkeleton = EntrySkeletonType<TypePageBlogPostFields, "pageBlogPost">;
 export type TypePageBlogPost<Modifiers extends ChainModifiers, Locales extends LocaleCode> = Entry<TypePageBlogPostSkeleton, Modifiers, Locales>;
-export type TypePageBlogPostWithoutLinkResolutionResponse = TypePageBlogPost<"WITHOUT_LINK_RESOLUTION">;
-export type TypePageBlogPostWithoutUnresolvableLinksResponse = TypePageBlogPost<"WITHOUT_UNRESOLVABLE_LINKS">;
+export type TypePageBlogPostWithoutLinkResolutionResponse = TypePageBlogPost<"WITHOUT_LINK_RESOLUTION", string>;
+export type TypePageBlogPostWithoutUnresolvableLinksResponse = TypePageBlogPost<"WITHOUT_UNRESOLVABLE_LINKS", string>;
 export type TypePageBlogPostWithAllLocalesResponse<Locales extends LocaleCode = LocaleCode> = TypePageBlogPost<"WITH_ALL_LOCALES", Locales>;
 export type TypePageBlogPostWithAllLocalesAndWithoutLinkResolutionResponse<Locales extends LocaleCode = LocaleCode> = TypePageBlogPost<"WITHOUT_LINK_RESOLUTION" | "WITH_ALL_LOCALES", Locales>;
 export type TypePageBlogPostWithAllLocalesAndWithoutUnresolvableLinksResponse<Locales extends LocaleCode = LocaleCode> = TypePageBlogPost<"WITHOUT_UNRESOLVABLE_LINKS" | "WITH_ALL_LOCALES", Locales>;

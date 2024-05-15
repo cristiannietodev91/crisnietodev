@@ -4,14 +4,9 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'miro.medium.com',
-                port: '',
-            },
-            {
-                protocol: 'https',
-                hostname: 'images.unsplash.com',
-                port: '',
-            },
+                hostname: 'images.ctfassets.net',
+                port: ''
+            }
         ],
     },
 }

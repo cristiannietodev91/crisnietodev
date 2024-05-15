@@ -1,6 +1,6 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
 
-export interface TypeComponentAuthorFields {
+export type TypeComponentAuthorFields = {
     internalName: EntryFieldTypes.Symbol;
     name: EntryFieldTypes.Symbol;
     avatar?: EntryFieldTypes.AssetLink;

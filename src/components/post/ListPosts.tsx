@@ -1,133 +1,147 @@
 "use client"
 
-import { Entry } from 'contentful'
-import React from 'react'
-import { useMediaQuery } from 'usehooks-ts'
-import { TypePageBlogPostSkeleton } from '../../../@types/generated'
-import BlogCard from '../card/BlogCard'
+import React from 'react';
+import { useMediaQuery } from 'usehooks-ts';
+import { Text } from '@cristian.nieto.dev/cs-forms';
+import BlogCard from '../card/BlogCard';
 import styles from "./ListPosts.module.css";
+import Image from 'next/image';
+import noPostImage from "./noBlogs.png";
+import { TypePageBlogPostWithoutUnresolvableLinksResponse } from '../../../@types/generated/TypePageBlogPost';
+
 
 type Props = {
-    entries: Entry<TypePageBlogPostSkeleton, undefined, string>[]
+    entries: TypePageBlogPostWithoutUnresolvableLinksResponse[]
 }
+
+type RenderBlogCardType = {
+    item: TypePageBlogPostWithoutUnresolvableLinksResponse;
+    renderDescription?: boolean;
+    renderPublishedDate?: boolean;
+    variant?: "vertical" | "horizontal";
+    className?: string;
+    imagePostProps?: {
+        width?: number;
+        height?: number;
+        responsive?: boolean;
+    }
+}
+
 
 const ListPosts = ({ entries }: Props) => {
     const isOver900px = useMediaQuery('(min-width: 900px)');
 
-    return (
-        <>
-            <div className={styles.desktopContainer}>
-                <div className={styles.topPostContainer}>
-                    <div className={styles.leftTopPost}>
-                        <BlogCard
-                            imageProps={{
-                                imageUrl: "https://miro.medium.com/v2/resize:fit:1400/1*if0orFwrdN8q50lKsFkriw.jpeg",
-                                altText: "Image contentful",
-                                width: 650,
-                                height: 480,
-                                responsive: false
-                            }}
-                            authorImage={{
-                                imageUrl: "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                                altText: "Author",
-                                width: 30,
-                                height: 30
-                            }}
-                            authorName='Cristian Nieto'
-                            title="Lorem ipsum dolor, sit amet consectetur adipisicing elit."
-                            tags={["Tecnology", "AI", "Ciber"]} />
-                    </div>
-                    <div className={styles.rightTopPost}>
-                        <div>
-                            <BlogCard
-                                imageProps={{
-                                    imageUrl: "https://miro.medium.com/v2/resize:fit:1400/1*if0orFwrdN8q50lKsFkriw.jpeg",
-                                    altText: "Image contentful",
-                                    width: 150,
-                                    height: 150
-                                }}
-                                authorImage={{
-                                    imageUrl: "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                                    altText: "Author",
-                                    width: 30,
-                                    height: 30
-                                }}
-                                authorName='Cristian Nieto'
-                                title="Lorem ipsum dolor, sit amet consectetur adipisicing elit."
-                                tags={["Tecnology", "AI", "Ciber"]} />
+    if (!entries || entries.length === 0) {
+        return (
+            <div className={styles.noBlogsContainer}>
+                <div className={styles.noBlogsImageContainer}>
+                    <Image src={noPostImage} alt="No blogs image" layout="responsive" width={500} height={500} />
+                </div>
+                <Text size='lg' className={styles.emptyFirstDescription}>Looks like there are not blogs created yet</Text>
+                <Text>Blogs are created from the CMS, go there and express your ideas</Text>
+            </div>
+        );
+    }
+
+    const RenderBlogCard = ({
+        item,
+        variant,
+        className,
+        renderDescription = true,
+        renderPublishedDate = true,
+        imagePostProps
+    }: RenderBlogCardType) => {
+        const fields = item.fields;
+        const { title, author, featuredImage, shortDescription, publishedDate } = fields;
+
+        if (!author || !featuredImage) {
+            return null;
+        }
+
+        const { file: postImageFile } = featuredImage.fields;
+        const { url: postImageUrl } = postImageFile || {};
+        const { width = 650, height = 480, responsive = true } = imagePostProps || {};
+
+        const { name, avatar } = author.fields;
+        const { file: authorFile } = avatar?.fields || {};
+        const { url: authorImageUrl } = authorFile || {};
+
+        return <BlogCard
+            imageProps={{
+                imageUrl: `https:${postImageUrl}`,
+                altText: "Image contentful",
+                width: width,
+                height: height,
+                responsive: responsive
+            }}
+            authorImage={{
+                imageUrl: `https:${authorImageUrl}`,
+                altText: "Author",
+                width: 30,
+                height: 30
+            }}
+            authorName={name || 'No author'}
+            title={title}
+            tags={[]}
+            className={className}
+            variant={variant}
+            {...(renderDescription && { description: shortDescription })}
+            {...(renderPublishedDate && { datePublished: publishedDate })} />
+    }
+
+
+    return (<>
+        {entries && entries.length > 0 ? (
+            <>
+                <div className={styles.desktopContainer}>
+                    <div className={styles.topPostContainer}>
+                        <div className={styles.leftTopPost}>
+                            {entries && entries[0] && (
+                                <RenderBlogCard
+                                    item={entries[0]}
+                                    className={styles.topBlogStyle}
+                                    renderDescription={false}
+                                    renderPublishedDate={false}
+                                    imagePostProps={{ responsive: false , height: 650 }}
+                                />
+                            )}
                         </div>
-                        <div>
-                            <BlogCard
-                                imageProps={{
-                                    imageUrl: "https://miro.medium.com/v2/resize:fit:1400/1*if0orFwrdN8q50lKsFkriw.jpeg",
-                                    altText: "Image contentful",
-                                    width: 150,
-                                    height: 150
-                                }}
-                                authorImage={{
-                                    imageUrl: "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                                    altText: "Author",
-                                    width: 30,
-                                    height: 30
-                                }}
-                                authorName='Cristian Nieto'
-                                title="Lorem ipsum dolor, sit amet consectetur adipisicing elit."
-                                datePublished="2024-04-30"
-                                tags={["Tecnology", "AI", "Ciber"]} />
+                        <div className={styles.rightTopPost}>
+                            {entries && entries[1] && (
+                                <RenderBlogCard
+                                    item={entries[1]}
+                                    className={styles.topBlogStyle}
+                                    renderDescription={false}
+                                    renderPublishedDate={false}
+                                    imagePostProps={{ width: 100, height: 100 }}
+                                />
+                            )}
+                            {entries && entries[2] && (
+                                <RenderBlogCard
+                                    item={entries[1]}
+                                    className={styles.topBlogStyle}
+                                    renderDescription={false}
+                                    renderPublishedDate={false}
+                                    imagePostProps={{ width: 150, height: 150 }}
+                                />
+                            )}
                         </div>
                     </div>
                 </div>
+                <div className={styles.blogsContainer}>
+                    {entries && entries.length > 0 && entries.map(entry => (
+                        <RenderBlogCard
+                            item={entry} key={entry.fields.slug}
+                            variant={isOver900px ? "horizontal" : "vertical"} />
+                    ))}
+                </div>
+            </>
+        ) : (
+            <div>
+                There are no blogs posted
             </div>
-            <div className={styles.blogsContainer}>
-                <BlogCard
-                    imageProps={{
-                        imageUrl: "https://miro.medium.com/v2/resize:fit:1400/1*if0orFwrdN8q50lKsFkriw.jpeg",
-                        altText: "Image contentful",
-                        width: 450,
-                        height: 350
-                    }}
-                    authorImage={{
-                        imageUrl: "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                        altText: "Author",
-                        width: 30,
-                        height: 30
-                    }}
-                    variant={isOver900px ? "horizontal" : "vertical"}
-                    authorName='Cristian Nieto'
-                    title="Lorem ipsum dolor, sit amet consectetur adipisicing elit."
-                    datePublished="2024-04-30"
-                    tags={["Tecnology", "AI", "Ciber"]}
-                    description={`Lorem ipsum dolor sit amet consectetur \
-                    adipisicing elit. Enim accusantium qui, iusto \
-                    facere voluptatem ipsa. Unde libero soluta \
-                    officia quisquam et alias consequatur. Veritatis, \
-                    quam perferendis quis nesciunt voluptatum libero`} />
-                <BlogCard
-                    imageProps={{
-                        imageUrl: "https://miro.medium.com/v2/resize:fit:1400/1*if0orFwrdN8q50lKsFkriw.jpeg",
-                        altText: "Image contentful",
-                        width: 450,
-                        height: 350
-                    }}
-                    authorImage={{
-                        imageUrl: "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                        altText: "Author",
-                        width: 30,
-                        height: 30
-                    }}
-                    variant={isOver900px ? "horizontal" : "vertical"}
-                    authorName='Cristian Nieto'
-                    title="Lorem ipsum dolor, sit amet consectetur adipisicing elit."
-                    datePublished="2024-04-30"
-                    tags={["Tecnology", "AI", "Ciber"]}
-                    description={`Lorem ipsum dolor sit amet consectetur \
-                    adipisicing elit. Enim accusantium qui, iusto \
-                    facere voluptatem ipsa. Unde libero soluta \
-                    officia quisquam et alias consequatur. Veritatis, \
-                    quam perferendis quis nesciunt voluptatum libero`} />
-            </div>
-        </>
-    )
+        )}
+    </>)
 }
 
 export default ListPosts

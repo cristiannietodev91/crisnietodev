@@ -7,7 +7,7 @@ import BlogCard from '../card/BlogCard';
 import styles from "./ListPosts.module.css";
 import Image from 'next/image';
 import noPostImage from "./noBlogs.png";
-import { TypePageBlogPostWithoutUnresolvableLinksResponse } from '../../../@types/generated/TypePageBlogPost';
+import { TypePageBlogPostWithoutUnresolvableLinksResponse } from '@/types';
 
 
 type Props = {

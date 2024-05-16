@@ -12,7 +12,7 @@
     "contentful-login": "contentful login",
     "contentful-space-use": "contentful space use",
     "create-contentful-export": "contentful space export --export-dir ./src/lib/contentful --content-file export.json",
-    "cf-content-types-generator": "cf-content-types-generator ./src/lib/contentful/export.json -X -r -o @types/generated"
+    "cf-content-types-generator": "cf-content-types-generator ./src/lib/contentful/export.json -X -r -o ./src/types"
   },
   "dependencies": {
     "@cristian.nieto.dev/cs-forms": "^0.3.0",

@@ -1,5 +1,5 @@
-import BlogCard from "@/components/card/BlogCard";
-import { TypePageBlogPostSkeleton } from "../../../@types/generated";
+
+import { TypePageBlogPostSkeleton } from "@/types";
 import { client } from "../../lib/contentful/client";
 import ListPosts from "@/components/post/ListPosts";
 

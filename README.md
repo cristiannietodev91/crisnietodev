@@ -35,7 +35,7 @@ I want to follow the React philosophy creating reusable and responsive component
 
 ## Inspiration
 
-The pandemic brought changes to many people's life I was no exception. I started working remotely with USA clients and I realized what good developers around world were doing. One of those good things are that they have their own portfolio. I wanted to have my own. 
+The pandemic brought changes to many people's lives, and I was no exception. I started to work remotely with clients and projects in USA, which made me realize how competitive the global market is now. To showcase my strengths and stand out, I decided to create this portfolio.
 
 
 ## What is next
@@ -49,9 +49,10 @@ The pandemic brought changes to many people's life I was no exception. I started
 - [ ] Website/project images
 - [ ] Site most be accessible for screen readers
 - [ ] Unit testing to each component
-- [ ] Load content from CMS
+- [X] Load content from CMS
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
 ## Getting Started
 
 First, run the development server:
@@ -65,3 +66,41 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### Contentful
+
+This project connects to Contentful CMS to get post blogs.
+
+Before starting it is needed to set `CONTENTFUL_SPACE_ID` and `CONTENTFUL_ACCESS_TOKEN` env variables to connect the project to Contentful CMS. Those variables can be obtain from Contentful Web Page.
+
+#### Typescript
+
+Each time the Contentful model changes the typescript schema must be updated. The types definition for this project are in the folder `./src/types/` and the project uses `cf-content-types-generator` library to create automatically the schema based on contentful export. Please follows the next steps each time that the schema needs to be updated.
+
+If you have not installed the Contentful CLI it can be installed with the next commands
+
+```sh
+// using homebrew
+brew install contentful-cli
+
+// Using npm
+npm install -g contentful-cli
+```
+
+if you already installed the Contentful CLI you must log in the CLI running
+
+```sh
+npm run contentful-login
+```
+
+after login you must create the contentful export with
+
+```sh
+npm run create-contentful-export
+```
+
+With the export generated in the route `./src/lib/contentful/export.json` you can update the schema executing
+
+```sh
+npm run cf-content-types-generator
+```

@@ -91,57 +91,50 @@ const ListPosts = ({ entries }: Props) => {
 
 
     return (<>
-        {entries && entries.length > 0 ? (
-            <>
-                <div className={styles.desktopContainer}>
-                    <div className={styles.topPostContainer}>
-                        <div className={styles.leftTopPost}>
-                            {entries && entries[0] && (
-                                <RenderBlogCard
-                                    item={entries[0]}
-                                    className={styles.topBlogStyle}
-                                    renderDescription={false}
-                                    renderPublishedDate={false}
-                                    imagePostProps={{ responsive: false , height: 650 }}
-                                />
-                            )}
-                        </div>
-                        <div className={styles.rightTopPost}>
-                            {entries && entries[1] && (
-                                <RenderBlogCard
-                                    item={entries[1]}
-                                    className={styles.topBlogStyle}
-                                    renderDescription={false}
-                                    renderPublishedDate={false}
-                                    imagePostProps={{ width: 500, height: 300, responsive: false }}
-                                />
-                            )}
-                            {entries && entries[2] && (
-                                <RenderBlogCard
-                                    item={entries[2]}
-                                    className={styles.topBlogStyle}
-                                    renderDescription={false}
-                                    renderPublishedDate={false}
-                                    imagePostProps={{ width: 500, height: 300, responsive: false }}
-                                />
-                            )}
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.blogsContainer}>
-                    {entries && entries.length > 0 && entries.map(entry => (
+        <div className={styles.desktopContainer}>
+            <div className={styles.topPostContainer}>
+                <div className={styles.leftTopPost}>
+                    {entries && entries[0] && (
                         <RenderBlogCard
-                            item={entry} key={entry.fields.slug}
-                            variant={isOver900px ? "horizontal" : "vertical"} />
-                    ))}
+                            item={entries[0]}
+                            className={styles.topBlogStyle}
+                            renderDescription={false}
+                            renderPublishedDate={false}
+                            imagePostProps={{ responsive: false, height: 650 }}
+                        />
+                    )}
                 </div>
-            </>
-        ) : (
-            <div>
-                There are no blogs posted
+                <div className={styles.rightTopPost}>
+                    {entries && entries[1] && (
+                        <RenderBlogCard
+                            item={entries[1]}
+                            className={styles.topBlogStyle}
+                            renderDescription={false}
+                            renderPublishedDate={false}
+                            imagePostProps={{ width: 500, height: 300, responsive: false }}
+                        />
+                    )}
+                    {entries && entries[2] && (
+                        <RenderBlogCard
+                            item={entries[2]}
+                            className={styles.topBlogStyle}
+                            renderDescription={false}
+                            renderPublishedDate={false}
+                            imagePostProps={{ width: 500, height: 300, responsive: false }}
+                        />
+                    )}
+                </div>
             </div>
-        )}
-    </>)
+        </div>
+        <div className={styles.blogsContainer}>
+            {entries && entries.length > 0 && entries.map(entry => (
+                <RenderBlogCard
+                    item={entry} key={entry.fields.slug}
+                    variant={isOver900px ? "horizontal" : "vertical"} />
+            ))}
+        </div>
+    </>
+    )
 }
 
 export default ListPosts

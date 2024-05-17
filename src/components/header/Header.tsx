@@ -14,9 +14,9 @@ const ButtonIcon = dynamic(() => import("../button/icon/ButtonIcon"), {
 });
 
 const items = [
-  { href: "#about", text: "About" },
-  { href: "#experience", text: "Experience" },
-  { href: "#contact", text: "Contact" },
+  { href: "/#about", text: "About" },
+  { href: "/#experience", text: "Experience" },
+  { href: "/#contact", text: "Contact" },
   { href: "/blog", text: "Blog" },
 ];
 

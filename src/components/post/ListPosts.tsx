@@ -1,13 +1,13 @@
 "use client"
 
 import React from 'react';
-import { useMediaQuery } from 'usehooks-ts';
 import { Text } from '@cristian.nieto.dev/cs-forms';
 import BlogCard from '../card/BlogCard';
 import styles from "./ListPosts.module.css";
 import Image from 'next/image';
 import noPostImage from "./noBlogs.png";
 import { TypePageBlogPostWithoutUnresolvableLinksResponse } from '@/types';
+import useBetterMediaQuery from '@/hooks/useBetterMediaQuery';
 
 
 type Props = {
@@ -29,7 +29,7 @@ type RenderBlogCardType = {
 
 
 const ListPosts = ({ entries }: Props) => {
-    const isOver900px = useMediaQuery('(min-width: 900px)');
+    const isOver900px = useBetterMediaQuery('(min-width: 900px)');
 
     if (!entries || entries.length === 0) {
         return (

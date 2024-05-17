@@ -16,5 +16,5 @@ export default async function Blog() {
     }
   });
   
-  return <ListPosts entries={[items[0], items[1], items[2]]}></ListPosts>;
+  return <ListPosts entries={items}></ListPosts>;
 }

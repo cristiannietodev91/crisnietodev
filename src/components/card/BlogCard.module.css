@@ -1,0 +1,77 @@
+.blogCard {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35em;
+    padding-bottom: 1.5em;
+}
+
+.horizontal {
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.horizontalImageContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+.horizontalContent {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.authorInfo {
+    display: flex;
+    align-items: center;
+}
+
+.nameAuthor {
+    display: flex;
+    align-items: center;
+}
+
+.authorHorizontal {
+    gap: 5em;
+}
+
+.authorImage {
+    border-radius: 1em;
+    margin-right: 0.4em;
+}
+
+.badgeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em;
+}
+
+.titleStyle {
+    color: red;
+}
+
+@media (min-width: 900px) {
+    
+    .blogCard {
+        gap: 0.1em;
+    }
+
+    .horizontal {
+        flex-direction: row;
+        gap: 1.5em;
+    }
+
+    .horizontalContent { 
+        width: 70%;
+    }
+
+    .horizontalImageContainer {
+        width: 30%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .imageHorizontal {
+        padding: .8em 0;
+    }
+}

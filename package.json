@@ -8,7 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "contentful-login": "contentful login",
+    "contentful-space-use": "contentful space use",
+    "create-contentful-export": "contentful space export --export-dir ./src/lib/contentful --content-file export.json",
+    "cf-content-types-generator": "cf-content-types-generator ./src/lib/contentful/export.json -X -r -o ./src/types"
   },
   "dependencies": {
     "@cristian.nieto.dev/cs-forms": "^0.3.0",
@@ -16,6 +20,7 @@
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "classnames": "^2.3.2",
+    "contentful": "^10.8.8",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.8",
     "next": "13.4.8",
@@ -33,7 +38,9 @@
     "@storybook/nextjs": "^7.4.0",
     "@storybook/react": "^7.4.0",
     "@storybook/testing-library": "^0.2.0",
+    "cf-content-types-generator": "^2.15.0",
     "eslint-plugin-storybook": "^0.6.13",
-    "storybook": "^7.4.0"
+    "storybook": "^7.4.0",
+    "ts-node": "^10.9.2"
   }
 }

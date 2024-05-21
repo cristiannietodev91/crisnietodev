@@ -1,0 +1,36 @@
+.profileSm {
+    position: absolute;
+    z-index: -1;
+    filter: grayscale(100%);
+    bottom: 0;
+    right: 0;
+}
+
+.profileMd {
+    display: none;
+}
+
+@media (min-height: 1000px) {
+    .profileSm {
+        display: none;
+    }
+
+    .profileMd {
+        display: block;
+        position: absolute;
+        z-index: -1;
+        filter: grayscale(100%);
+        bottom: 0;
+        right: 0;
+    }
+}
+
+@media (min-width: 900px) {
+    .profileSm {
+        display: none;
+    }
+
+    .profileMd {
+        display: none;
+    }
+}

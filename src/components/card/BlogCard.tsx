@@ -28,7 +28,6 @@ type Props = {
 
 const BlogCard = ({ imageProps, authorImage, authorName, datePublished, title, description, tags = [], variant = "vertical", className }: Props) => {
 
-
     const renderImage = () => {
         const { imageUrl, altText, width, height, responsive = true } = imageProps || {};
 

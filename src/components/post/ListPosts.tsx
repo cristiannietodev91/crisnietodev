@@ -51,8 +51,7 @@ const ListPosts = ({ entries }: Props) => {
         renderPublishedDate = true,
         imagePostProps
     }: RenderBlogCardType) => {
-        const fields = item.fields;
-        const { title, author, featuredImage, shortDescription, publishedDate } = fields;
+        const { slug, title, author, featuredImage, shortDescription, publishedDate } = item.fields;
 
         if (!author || !featuredImage) {
             return null;
@@ -67,6 +66,7 @@ const ListPosts = ({ entries }: Props) => {
         const { url: authorImageUrl } = authorFile || {};
 
         return <BlogCard
+            slug={slug}
             imageProps={{
                 imageUrl: `https:${postImageUrl}`,
                 altText: "Image contentful",

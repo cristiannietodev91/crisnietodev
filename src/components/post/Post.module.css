@@ -1,0 +1,48 @@
+.postContainer {
+    margin-top: 2.5em;
+}
+
+.postHeader {
+    display: flex;
+    flex-direction: column;
+}
+
+.postDescriptionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 1em 0;
+}
+
+.authorName {
+    font-weight: 800;
+}
+
+.postDate {
+    font-weight: 700;
+}
+
+.description {
+    margin: 1em 0;
+}
+
+.authorInfo {
+    display: flex;
+    align-items: center;
+}
+
+.authorImage {
+    border-radius: 1em;
+    margin-left: 0.8em;
+}
+
+@media (min-width: 1024px) {
+    .postHeader {
+        flex-direction: row;
+        margin-bottom: 3em;
+    }
+
+    .postDescriptionContainer {
+        margin: 2em 1.5em 0 1.5em;
+    }
+}

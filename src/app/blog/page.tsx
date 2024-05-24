@@ -1,6 +1,6 @@
 
 import { TypePageBlogPostSkeleton } from "@/types";
-import { client } from "../../lib/contentful/client";
+import { client } from '@/lib/contentful/client';
 import ListPosts from "@/components/post/ListPosts";
 
 export default async function Blog() {

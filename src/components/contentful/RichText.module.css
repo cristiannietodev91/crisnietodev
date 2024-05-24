@@ -1,0 +1,28 @@
+.paragraph {
+    line-height: 2 !important;
+}
+
+.postImage {
+    max-width: 600px;
+    margin: 2em auto;
+    border-radius: 1em;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 1024px) {
+
+    .content p,
+    .content img {
+        flex: 1 1 40%;
+        margin: 1em 1em 1.8em 1em;
+    }
+
+    
+    .content img {
+        align-self: start;
+    }
+}

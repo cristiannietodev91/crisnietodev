@@ -4,6 +4,7 @@ import cx from "classnames";
 import styles from "./BlogCard.module.css";
 import { Text } from '@cristian.nieto.dev/cs-forms';
 import Badge from '../badge/Badge';
+import Link from 'next/link';
 
 type ImageProps = {
     imageUrl: string;
@@ -15,6 +16,7 @@ type ImageProps = {
 type ImagePropsExtended = ImageProps & { responsive?: boolean }
 
 type Props = {
+    slug: String;
     imageProps?: ImagePropsExtended;
     authorImage: ImageProps;
     authorName: string;
@@ -26,7 +28,7 @@ type Props = {
     className?: string;
 }
 
-const BlogCard = ({ imageProps, authorImage, authorName, datePublished, title, description, tags = [], variant = "vertical", className }: Props) => {
+const BlogCard = ({ slug, imageProps, authorImage, authorName, datePublished, title, description, tags = [], variant = "vertical", className }: Props) => {
 
     const renderImage = () => {
         const { imageUrl, altText, width, height, responsive = true } = imageProps || {};
@@ -110,14 +112,16 @@ const BlogCard = ({ imageProps, authorImage, authorName, datePublished, title, d
     }
 
     return (
-        <div className={cx(styles.blogCard, {
-            [styles.horizontal]: variant === "horizontal",
-            ...(className && { [className]: true }),
-        })}>
-            {renderImage()}
-            {variant === "vertical" && renderVerticalVariant()}
-            {variant === "horizontal" && renderHorizontalVariant()}
-        </div>
+        <Link href={`/blog/${slug}`} aria-label={title}>
+            <div className={cx(styles.blogCard, {
+                [styles.horizontal]: variant === "horizontal",
+                ...(className && { [className]: true }),
+            })}>
+                {renderImage()}
+                {variant === "vertical" && renderVerticalVariant()}
+                {variant === "horizontal" && renderHorizontalVariant()}
+            </div>
+        </Link>
     )
 }
 
